@@ -6,8 +6,7 @@
 
   <title>GEOLYTIX | MapIcons</title>
 
-  <link rel="icon" type="image/x-icon" href="https://geolytix.github.io/xyz/public/icons/favicon.ico" />
-
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -55,11 +54,11 @@
 
   window.onload = async () => {
 
-    const pathname = window.location.pathname.replace(/\/MapIcons/, '');
+    const pathname = window.location.pathname);
 
     const response = await fetch(`https://api.github.com/repos/geolytix/mapicons/contents${pathname}`)
 
-    alert(response);
+    alert(pathname);
     
     const results = await response.json()
 
