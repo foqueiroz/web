@@ -62,17 +62,8 @@
 
     render(document.body, html`
     <div>
-      ${results.filter(el => el.type === 'dir').map(el => html`
-      <a
-        class="directory"
-        href="${el.name}`}">${el.name}`)}
-    </div>
-    <div class="gallery">
-      ${results.filter(el => el.name.match(/\.(gif|jpe?g|tiff?|png|webp|bmp|svg)$/i)).map(el => html`
-        <a
-          class="img"
-          href="${el.name}`}"
-          style="${`background-image: url(${el.name})`}">`)}`)
+      ${results}
+    </div>`)
   
 
   }
