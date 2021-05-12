@@ -4,7 +4,7 @@
       (async () => {
         const response = await fetch('https://api.github.com/repositories/364935169/contents/public/patterns');
         const data = await response.json();
-        let htmlString = '<div>';
+        let htmlString = '';
         for (let file of data) {
        
 if(!file.name.includes("htm")){
@@ -13,7 +13,7 @@ if(!file.name.includes("htm")){
           
         htmlString += `<a href="${file.name}"><button><img src="${file.name}" width="256px" title="${file.name}" style="padding:5px"><br>${file.name}</button></a>`;
         }
-        htmlString += '</div>';
+        htmlString += '';
         document.getElementsByTagName('body')[0].innerHTML = htmlString;
       
         }
