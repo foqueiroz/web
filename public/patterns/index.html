@@ -4,11 +4,11 @@
       (async () => {
         const response = await fetch('https://api.github.com/repositories/364935169/contents/public/patterns');
         const data = await response.json();
-        let htmlString = '<ul>';
+        let htmlString = '<div>';
         for (let file of data) {
           htmlString += `<li><a href="${file.name}"><img src="${file.name}" width="256px"><br>${file.name}</a></li>`;
         }
-        htmlString += '</ul>';
+        htmlString += '</div>';
         document.getElementsByTagName('body')[0].innerHTML = htmlString;
       })()
     </script>
