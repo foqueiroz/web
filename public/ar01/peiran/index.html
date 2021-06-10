@@ -5,14 +5,23 @@
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
 <body style='margin : 0px; overflow: hidden;'>
-  <a-scene embedded arjs='sourceType: webcam;'>
-      <a-marker preset='hiro'>
+  <!-- a-scene embedded arjs='sourceType: webcam;'>
+      <a-marker preset='hiro' -->
         <!-- Adding an OBJ file to an AR Project-->
-        <a-entity obj-model="obj: url(AR-PR.obj); mtl: url(AR-PR.mtl)">
+        <!-- a-entity obj-model="obj: url(AR-PR.obj); mtl: url(AR-PR.mtl)">
         </a-entity>
               
       </a-marker>
   <a-entity camera>
   </a-entity>
-  </a-scene>
+  </a-scene -->
+  
+  <a-scene>
+  <a-assets>
+    <a-asset-item id="tree-obj" src="AR-PR.obj"></a-asset-item>
+    <a-asset-item id="tree-mtl" src="AR-PR.mtl></a-asset-item>
+  </a-assets>
+
+  <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+</a-scene>
 </body>
