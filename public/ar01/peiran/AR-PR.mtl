@@ -1,0 +1,171 @@
+newmtl 默认材质 2
+illum 7
+Kd 0.815686 0.815686 0.815686
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 0.4
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+map_Kd AR-PR/默认材质 2_baseColor.png
+
+newmtl 默认材质 2 2
+illum 7
+Kd 0.815686 0.815686 0.815686
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 1
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+map_Kd AR-PR/默认材质 2_baseColor 2.png
+
+newmtl 曲面材质
+illum 7
+Kd 0.929412 0.184314 0.184314
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0.5
+d 0.5
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 0.503
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+
+newmtl 曲面材质 2
+illum 7
+Kd 1 0.6 0
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0.5
+d 0.5
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 0.503
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+
+newmtl 曲面材质 2 3
+illum 7
+Kd 1 0.796078 0.058824
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0.5
+d 0.5
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 0.503
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+
+newmtl 曲面材质 2 3 4
+illum 7
+Kd 0.580392 0.913725 0.047059
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0.5
+d 0.5
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 0.503
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+
+newmtl 曲面材质 2 3 4 5
+illum 7
+Kd 0.086275 0.705882 0.890196
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0.51
+d 0.49
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 0.503
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+
+newmtl 曲面材质 2 3 4 5 6
+illum 7
+Kd 0.372549 0.160784 0.94902
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0.5
+d 0.5
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 0.503
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+
+newmtl 曲面材质 2 3 4 5 6 7
+illum 7
+Kd 0.584314 0.219608 0.862745
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0.5
+d 0.5
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 0.503
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+
+newmtl 默认材质 7
+illum 7
+Kd 0.815686 0.815686 0.815686
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 0.4
+Ns 16
+Ks 1 1 1
+adobe_glow 0
