@@ -59,7 +59,7 @@ AFRAME.registerComponent('slider', {
     el.object3D.worldToLocal(localPosition);
    
     //Trying to grab
-   // if (localPosition.x < -halfWidth || localPosition.x > halfWidth) { return; }
+    if (localPosition.x < -halfWidth || localPosition.x > halfWidth) { return; }
     this.pickerEl.object3D.position.x = localPosition.x;
     evtDetail.value = (this.pickerEl.object3D.position.x + halfWidth) / this.data.width;
     this.el.emit('sliderchanged', evtDetail);
