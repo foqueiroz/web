@@ -63,7 +63,8 @@ AFRAME.registerComponent('slider', {
     //this.pickerEl.object3D.position.x = localPosition.x;
     //evtDetail.value = (this.pickerEl.object3D.position.x + halfWidth) / this.data.width;
     //this.el.emit('sliderchanged', evtDetail);
-    this.pickerEl.object3D.position = localPosition;
+    this.pickerEl.object3D.position.x = localPosition.x;
+    this.el.emit('sliderchanged', evtDetail);
     
   }
 });
