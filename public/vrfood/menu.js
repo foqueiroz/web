@@ -8,9 +8,13 @@ AFRAME.registerComponent('menu', {
       width: 0.6,
       height: 0.40,
       depth: 0.01
+      
     });
     menuBackGroundEl.setAttribute('material', {
-      color: 'gray'
+      color: 'blue',
+      transparent: 'true',
+      opacity: 0.2,
+      visible: 'true'
     });
     menuBackGroundEl.setAttribute('position', '0 0 -0.025');
     el.appendChild(menuBackGroundEl);

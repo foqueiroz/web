@@ -12,6 +12,7 @@ AFRAME.registerComponent('pinchable', {
     sceneEl.addEventListener('pinchstarted', this.onPinchStarted);
     sceneEl.addEventListener('pinchended', this.onPinchEnded);
     sceneEl.addEventListener('pinchmoved', this.onPinchMoved);
+      sceneEl.addEventListener('pinchstarted', this.onPinchStarted);
   },
 
   bindMethods: function () {
@@ -21,6 +22,7 @@ AFRAME.registerComponent('pinchable', {
   },
 
   onPinchStarted: function (evt) {
+    alert("pinch start");
     var pinchDistance = this.calculatePinchDistance(evt.detail.position);
     if (pinchDistance < this.data.pinchDistance) {
       this.el.emit('pinchedstarted');

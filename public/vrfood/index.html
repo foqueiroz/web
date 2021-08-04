@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Hand Tracking! • A-Frame</title>
-    <meta name="description" content="Hand Tracking! • A-Frame">
-    <script src="aframe-master.js"></script>
-    <script src="info-message.js"></script>
-    <script src="aframe-environment-component.min.js"></script>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@7b3f4b5a611f13ce1e8d69ed4d670e3b95a0243d/dist/aframe-master.min.js"></script>
+    <!-- script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script -->
     <script src="pinchable.js"></script>
     <script src="color-change.js"></script>
     <script src="slider.js"></script>
@@ -17,23 +16,113 @@
     <script src="event-manager.js"></script>
   </head>
   <body>
-    <a-scene environment auto-enter-vr cursor="rayOrigin:mouse" info-message="htmlSrc: #messageText">
-      <a-assets>
-        <a-asset-item id="messageText" src="message.html"></a-asset-item>
-      </a-assets>
-      <a-entity
-        id="boxGeometry"
-        position="0 1.0 -1"
-        rotation="45 45 0"
+ 
+     <a-scene environment cursor="rayOrigin:mouse" physics="debug: true" fog="type: linear; color: #000; near: 1; far:100">
+        <a-assets>
+    <a-assets>
+    <img id="sky" src="sky.png">
+  </a-assets>
+    <a-asset-item id="beefscene-obj" src="https://cdn.glitch.com/6f56cd56-bbd1-420c-88b3-5c9f035f9282%2Ffood%20supply%20chain%204.obj?v=1627049435848"></a-asset-item>
+    <a-asset-item id="beefscene-mtl" src="https://cdn.glitch.com/6f56cd56-bbd1-420c-88b3-5c9f035f9282%2Ffood%20supply%20chain%204.mtl?v=1627049600368"></a-asset-item>
+  </a-assets>
+       <a-sky src="#sky" material="fog: false"></a-sky>
+       <!-- a-sky color="#6EBAFF"></a-sky -->
+       
+ <!-- Floor -->
+       <a-cylinder position="0 -0.75 0" radius="100" height=".1" color="#FFC65D"></a-cylinder>
+       
+       
+       <a-entity id="rig" position="0 1.6 0">
+       <a-entity camera="active: true" look-controls>
+       
+        
+         
+         
+         
+       </a-entity>
+       </a-entity>
+     
+        <a-entity id="menu" menu position="0 1.4 -0.4" rotation="-90 0 0" event-manager>
+        <!-- a-entity slider position="0 0.10 0"></a-entity -->
+        
+        <!-- LEFT SIDE BUTTONS -->   
+        <a-entity id="beefLeftButton" button="label: beef" position="-0.2 0.06 0"></a-entity>
+        <a-entity id="cheeseLeftButton" button="label: cheese" position="-0.2 0 0"></a-entity>
+        <a-entity id="tofuLeftButton"button="label: tofu" position="-0.2 -0.06 0"></a-entity>
+        <a-entity id="prawnLeftButton"button="label: prawn" position="-0.2 -0.12 0"></a-entity>
+        
+      
+           <!-- RIGHT SIDE BUTTONS -->   
+        <a-entity id="beefRightButton" button="label: beef" position="0.2 0.06 0"></a-entity>
+        <a-entity id="cheeseRightButton" button="label: cheese" position="0.2 0 0"></a-entity>
+        <a-entity id="tofuRightButton"button="label: tofu" position="0.2 -0.06 0"></a-entity>
+        <a-entity id="prawnRightButton"button="label: prawn" position="0.2 -0.12 0"></a-entity>
+        
+           
+        <!-- a-entity id="darkModeButton" button="label: Dark Mode; width: 0.20; toggable: true" position="0 -0.10 0"></a-entity -->
+      
+         
+         
+         
+         </a-entity>
+
+        <!-- a-entity 
+          id="beefleft" 
+          obj-model="obj: #beefscene-obj; 
+          mtl: #beefscene-mtl"
+          scale="0.01 0.01 0.01"
+          position="-1 1 -1"
+          visible="true"
+      ></a-entity>
+       
+        </a-assets>
+        <a-entity 
+          id="cheeseleft" 
+          obj-model="obj: #beefscene-obj; 
+          mtl: #beefscene-mtl"
+          scale="0.01 0.01 0.01"
+          position="-1 1 -1"
+          rotation="0 90 0"
+          visible="false"
+      ></a-entity>
+       
+            <a-entity 
+          id="tofuleft" 
+          obj-model="obj: #beefscene-obj; 
+          mtl: #beefscene-mtl"
+          scale="0.01 0.01 0.01"
+          position="-1 1 -1"
+          rotation="0 180 0"
+          visible="false"
+      ></a-entity>
+    
+              <a-entity 
+          id="prawnleft" 
+          obj-model="obj: #beefscene-obj; 
+          mtl: #beefscene-mtl"
+          scale="0.01 0.01 0.01"
+          position="-1 1 -1"
+          rotation="0 270 0"
+          visible="false"
+      ></a-entity -->
+    
+    
+<!-- LEFT SIDE -->
+       
+       <a-entity
+        id="beefLeft"
+        position="-1 1.0 -1"
+        rotation="0 0 0"
         geometry="primitive: box; height: 0.6; width: 0.6; depth: 0.6"
         material="color: #ff4b5c"
         size-change
+        visible="true"
         scale="0.5 0.5 0.5"
       ></a-entity>
        <a-entity
-        id="torusGeometry"
-        position="0 1.0 -1"
-        rotation="45 45 0"
+        id="cheeseLeft"
+        position="-1 1.0 -1"
+        rotation="0 0 0"
         geometry="primitive: torus; radius: 0.4; radius-tubular: 0.06"
         material="color: #d2e603"
         size-change
@@ -41,24 +130,103 @@
         scale="0.5 0.5 0.5"
       ></a-entity>
        <a-entity
-        id="sphereGeometry"
-        position="0 1.0 -1"
-        rotation="45 45 0"
+        id="tofuLeft"
+        position="-1 1.0 -1"
+        rotation="0 0 0"
         geometry="primitive: sphere; radius: 0.6;"
-        material="color: #fcdab7"
+        material="color: #000000"
         size-change
         visible="false"
         scale="0.5 0.5 0.5"
       ></a-entity>
-      <a-entity id="menu" menu position="0 0.5 -0.5" rotation="-45 0 0" event-manager>
-        <a-entity slider position="0 0.10 0"></a-entity>
-        <a-entity id="sphereButton" button="label: sphere" position="-0.15 0 0"></a-entity>
-        <a-entity id="boxButton" button="label: box" position="0 0 0"></a-entity>
-        <a-entity id="torusButton"button="label: torus" position="0.15 0 0"></a-entity>
-        <a-entity id="darkModeButton" button="label: Dark Mode; width: 0.20; toggable: true" position="0 -0.10 0"></a-entity>
-      </a-entity>
+        <a-entity
+        id="prawnLeft"
+        position="-1 1.0 -1"
+        rotation="0 0 0"
+        geometry="primitive: sphere; radius: 0.6;"
+        material="color: #ffffff"
+        size-change
+        visible="false"
+        scale="0.5 0.5 0.5"
+      ></a-entity>
+      
+       
+    
+<!-- RIGHT SIDE -->
+       
+       <a-entity
+        id="beefRight"
+        position="1 1 -1"
+        rotation="0 0 0"
+        geometry="primitive: box; height: 0.6; width: 0.6; depth: 0.6"
+        material="color: #ff4b5c"
+        size-change
+        visible="false"
+        scale="0.5 0.5 0.5"
+      ></a-entity>
+       <a-entity
+        id="cheeseRight"
+        position="1 1 -1"
+        rotation="0 0 0"
+        geometry="primitive: torus; radius: 0.4; radius-tubular: 0.06"
+        material="color: #d2e603"
+        size-change
+        visible="true"
+        scale="0.5 0.5 0.5"
+      ></a-entity>
+       <a-entity
+        id="tofuRight"
+        position="1 1 -1"
+        rotation="0 0 0"
+        geometry="primitive: sphere; radius: 0.6;"
+        material="color: #000000"
+        size-change
+        visible="false"
+        scale="0.5 0.5 0.5"
+      ></a-entity>
+        <a-entity
+        id="prawnRight"
+        position="1 1 -1"
+        rotation="0 0 0"
+        geometry="primitive: sphere; radius: 0.6;"
+        material="color: #ffffff"
+        size-change
+        visible="false"
+        scale="0.5 0.5 0.5"
+      ></a-entity>
+       
+       
+       
+       
+       
+       
+       
+       
       <a-entity hand-tracking-controls="hand: left"></a-entity>
       <a-entity hand-tracking-controls="hand: right"></a-entity>
+       
+         
+       
+       
+       
+         <script>
+        var draggable = document.querySelector('[click-drag]');
+        draggable.addEventListener('dragstart', function(dragInfo) {
+          draggable.components['dynamic-body'].pause();
+        });
+        draggable.addEventListener('dragend', function(dragInfo) {
+          var x = dragInfo.detail.velocity.x;
+          var y = dragInfo.detail.velocity.y;
+          var z = dragInfo.detail.velocity.z;
+
+          draggable.components['dynamic-body'].play();
+          draggable.body.velocity.set(x, y, z);
+          console.log('drag end', dragInfo.detail.velocity);
+        });
+      </script>
+        
+       
     </a-scene>
+    
   </body>
 </html>
