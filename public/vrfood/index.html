@@ -197,26 +197,25 @@
        
          <script>
            
-            if (AFRAME.utils.device.checkHeadsetConnected()) {
+            
+           
+           document.querySelector('a-scene').addEventListener('enter-vr', function () {
+  // console.log("ENTERED VR");
+        setTimeout(() => {  
+          
+          if (AFRAME.utils.device.checkHeadsetConnected()) {
               alert("mobile or device");
             
             } else {
               document.querySelector('#cam').setAttribute('position', '0 1.6 0'); 
               document.querySelector('#cam').object3D.position.y = 1.6;
               document.querySelector('#menu').object3D.position.y = 1.3;
-              alert(document.querySelector('#cam').object3D.position.y);
+              document.querySelector('#landscapes').object3D.position.y = 0;
+              
+              ;
             }
-           
-           document.querySelector('a-scene').addEventListener('enter-vr', function () {
-  // console.log("ENTERED VR");
-        setTimeout(() => {  
         
-            this.cameEl = document.querySelector('#cam');
-    this.menueEl = document.querySelector('#menu');
-             this.landEl = document.querySelector('#landscapes');
-    
-    this.menueEl.object3D.position.y = this.cameEl.object3D.position.y - 0.3;
-             this.landEl.object3D.position.y = this.cameEl.object3D.position.y - 1.6;
+           
         
         
         }, 10);     
