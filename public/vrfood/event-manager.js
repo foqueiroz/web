@@ -33,7 +33,7 @@ AFRAME.registerComponent('event-manager', {
     
     this.menuEl.object3D.position.y = this.camEl.object3D.position.y - 0.4;
     
-    alert (this.menuEl.object3D.position.y);
+    //alert (this.menuEl.object3D.position.y);
     
     //this.darkModeButtonEl = document.querySelector('#darkModeButton');
     
