@@ -37,9 +37,7 @@ AFRAME.registerComponent('event-manager', {
     
     //this.darkModeButtonEl = document.querySelector('#darkModeButton');
     
-document.querySelector('a-scene').addEventListener('enter-vr', function () {
-   console.log("ENTERED VR");
-});
+
 
     this.buttonToGeometry = {
       'beefLeftButton': this.boxGeometryEl,
