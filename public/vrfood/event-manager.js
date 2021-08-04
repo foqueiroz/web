@@ -36,6 +36,10 @@ AFRAME.registerComponent('event-manager', {
     alert (this.menuEl.object3D.position.y);
     
     //this.darkModeButtonEl = document.querySelector('#darkModeButton');
+    
+document.querySelector('a-scene').addEventListener('enter-vr', function () {
+   console.log("ENTERED VR");
+});
 
     this.buttonToGeometry = {
       'beefLeftButton': this.boxGeometryEl,
@@ -68,9 +72,7 @@ AFRAME.registerComponent('event-manager', {
     
   },
   
-  document.querySelector('a-scene').addEventListener('enter-vr', function () {
-   console.log("ENTERED VR");
-});
+
 
   bindMethods: function () {
     this.onClick = this.onClick.bind(this);
