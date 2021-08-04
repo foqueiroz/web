@@ -232,10 +232,11 @@
            document.querySelector('a-scene').addEventListener('enter-vr', function () {
   // console.log("ENTERED VR");
              
-    this.camEl = document.querySelector('#cam');
-    this.menuEl = document.querySelector('#menu');
+    this.cameEl = document.querySelector('#cam');
+    this.menueEl = document.querySelector('#menu');
     
-    this.menuEl.object3D.position.y = this.camEl.object3D.position.y - 0.1;
+    this.menueEl.object3D.position.y = this.cameEl.object3D.position.y - 0.1;
+             console.log(this.menueEl.object3D.position.y );
 });
            
            
