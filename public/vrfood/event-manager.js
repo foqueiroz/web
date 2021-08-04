@@ -1,5 +1,7 @@
 /* global AFRAME */
 AFRAME.registerComponent('event-manager', {
+  
+  
 
   init: function () {
     this.bindMethods();
@@ -65,6 +67,10 @@ AFRAME.registerComponent('event-manager', {
     
     
   },
+  
+  document.querySelector('a-scene').addEventListener('enter-vr', function () {
+   console.log("ENTERED VR");
+});
 
   bindMethods: function () {
     this.onClick = this.onClick.bind(this);
