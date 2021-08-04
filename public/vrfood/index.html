@@ -202,6 +202,7 @@
               alert("mobile or device");
             
             } else {
+              document.querySelector('#cam').setAttribute('position', '0 1.6 0'); 
               document.querySelector('#cam').object3D.position.y = 1.6;
               document.querySelector('#menu').object3D.position.y = 1.3;
               alert(document.querySelector('#cam').object3D.position.y);
