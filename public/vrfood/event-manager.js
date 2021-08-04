@@ -26,7 +26,10 @@ AFRAME.registerComponent('event-manager', {
     this.rightpyramidButtonEl = document.querySelector('#prawnRightButton');
     
     
+    this.camEl = document.querySelector('#cam');
+    this.menuEl = document.querySelector('#menu');
     
+    this.menuEl.object3D.position.y = this.camEl.object3D.position.y - 0.4;
     
     //this.darkModeButtonEl = document.querySelector('#darkModeButton');
 
