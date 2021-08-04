@@ -230,8 +230,15 @@
          <script>
            
            document.querySelector('a-scene').addEventListener('enter-vr', function () {
-   console.log("ENTERED VR");
+  // console.log("ENTERED VR");
+             
+    this.camEl = document.querySelector('#cam');
+    this.menuEl = document.querySelector('#menu');
+    
+    this.menuEl.object3D.position.y = this.camEl.object3D.position.y - 0.4;
 });
+           
+           
         //var draggable = document.querySelector('[click-drag]');
         //draggable.addEventListener('dragstart', function(dragInfo) {
         //  draggable.components['dynamic-body'].pause();
