@@ -66,47 +66,10 @@
          
          </a-entity>
 
-        <!-- a-entity 
-          id="beefleft" 
-          obj-model="obj: #beefscene-obj; 
-          mtl: #beefscene-mtl"
-          scale="0.01 0.01 0.01"
-          position="-1 1 -1"
-          visible="true"
-      ></a-entity>
-       
-        </a-assets>
-        <a-entity 
-          id="cheeseleft" 
-          obj-model="obj: #beefscene-obj; 
-          mtl: #beefscene-mtl"
-          scale="0.01 0.01 0.01"
-          position="-1 1 -1"
-          rotation="0 90 0"
-          visible="false"
-      ></a-entity>
-       
-            <a-entity 
-          id="tofuleft" 
-          obj-model="obj: #beefscene-obj; 
-          mtl: #beefscene-mtl"
-          scale="0.01 0.01 0.01"
-          position="-1 1 -1"
-          rotation="0 180 0"
-          visible="false"
-      ></a-entity>
+
+       <!-- LADNSCAPES -->
     
-              <a-entity 
-          id="prawnleft" 
-          obj-model="obj: #beefscene-obj; 
-          mtl: #beefscene-mtl"
-          scale="0.01 0.01 0.01"
-          position="-1 1 -1"
-          rotation="0 270 0"
-          visible="false"
-      ></a-entity -->
-    
-    
+    <a-entity id="landscapes" position="0 0 0">
 <!-- LEFT SIDE -->
        
        <a-entity
@@ -205,6 +168,11 @@
         visible="false"
         scale="0.5 0.5 0.5"
       ></a-entity>
+      
+      
+      
+      <!-- closes landscapes -->
+      </a-entity>
        
        
        
@@ -234,8 +202,10 @@
              
     this.cameEl = document.querySelector('#cam');
     this.menueEl = document.querySelector('#menu');
+             this.landEl = document.querySelector('#landscapes');
     
     this.menueEl.object3D.position.y = this.cameEl.object3D.position.y - 0.3;
+             this.landEl.object3D.position.y = this.cameEl.object3D.position.y - 1.6;
              console.log(this.menueEl.object3D.position.y );
 });
            
