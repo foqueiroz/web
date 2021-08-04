@@ -17,7 +17,7 @@
   </head>
   <body>
  
-     <a-scene environment cursor="rayOrigin:mouse" physics="debug: true" fog="type: linear; color: #000; near: 1; far:100">
+     <a-scene environment   cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable" physics="debug: true" fog="type: linear; color: #000; near: 1; far:100">
         <a-assets>
     <a-assets>
     <img id="sky" src="sky.png">
@@ -46,17 +46,17 @@
         <!-- a-entity slider position="0 0.10 0"></a-entity -->
         
         <!-- LEFT SIDE BUTTONS -->   
-        <a-entity id="beefLeftButton" button="label: beef" position="-0.2 0.06 0"></a-entity>
-        <a-entity id="cheeseLeftButton" button="label: cheese" position="-0.2 0 0"></a-entity>
-        <a-entity id="tofuLeftButton"button="label: tofu" position="-0.2 -0.06 0"></a-entity>
-        <a-entity id="prawnLeftButton"button="label: prawn" position="-0.2 -0.12 0"></a-entity>
+        <a-entity id="beefLeftButton" button="label: beef" position="-0.2 0.06 0" class="raycastable"></a-entity>
+        <a-entity id="cheeseLeftButton" button="label: cheese" position="-0.2 0 0" class="raycastable"></a-entity>
+        <a-entity id="tofuLeftButton"button="label: tofu" position="-0.2 -0.06 0" class="raycastable"></a-entity>
+        <a-entity id="prawnLeftButton"button="label: prawn" position="-0.2 -0.12 0" class="raycastable"></a-entity>
         
       
            <!-- RIGHT SIDE BUTTONS -->   
-        <a-entity id="beefRightButton" button="label: beef" position="0.2 0.06 0"></a-entity>
-        <a-entity id="cheeseRightButton" button="label: cheese" position="0.2 0 0"></a-entity>
-        <a-entity id="tofuRightButton"button="label: tofu" position="0.2 -0.06 0"></a-entity>
-        <a-entity id="prawnRightButton"button="label: prawn" position="0.2 -0.12 0"></a-entity>
+        <a-entity id="beefRightButton" button="label: beef" position="0.2 0.06 0" class="raycastable"></a-entity>
+        <a-entity id="cheeseRightButton" button="label: cheese" position="0.2 0 0" class="raycastable"></a-entity>
+        <a-entity id="tofuRightButton"button="label: tofu" position="0.2 -0.06 0" class="raycastable"></a-entity>
+        <a-entity id="prawnRightButton"button="label: prawn" position="0.2 -0.12 0" class="raycastable"></a-entity>
         
            
         <!-- a-entity id="darkModeButton" button="label: Dark Mode; width: 0.20; toggable: true" position="0 -0.10 0"></a-entity -->
@@ -219,8 +219,9 @@
        <a-entity oculus-touch-controls="hand: left"></a-entity>
       <a-entity oculus-touch-controls="hand: right"></a-entity>
        
-       <a-entity laser-controls="hand: left"></a-entity>
-       <a-entity laser-controls="hand: right"></a-entity>
+      <a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: .raycastable"></a-entity>
+      <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
+
        
          
        
