@@ -31,7 +31,7 @@ AFRAME.registerComponent('event-manager', {
     this.camEl = document.querySelector('#cam');
     this.menuEl = document.querySelector('#menu');
     
-    this.menuEl.object3D.position.y = this.camEl.object3D.position.y - 0.4;
+    //this.menuEl.object3D.position.y = this.camEl.object3D.position.y - 0.4;
     
     //alert (this.menuEl.object3D.position.y);
     
