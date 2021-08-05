@@ -30,6 +30,8 @@ AFRAME.registerComponent('event-manager', {
     
     this.camEl = document.querySelector('#cam');
     this.menuEl = document.querySelector('#menu');
+	  
+	
     
     //this.menuEl.object3D.position.y = this.camEl.object3D.position.y - 0.4;
     
@@ -66,9 +68,9 @@ AFRAME.registerComponent('event-manager', {
     
     this.rightsphereButtonEl.addState('pressed');
 	  
+	    	
+	  
 	 
-    
-    
   },
   
 
@@ -110,13 +112,13 @@ AFRAME.registerComponent('event-manager', {
       this.buttonToGeometry[targetEl.id].object3D.visible = true;
 		   
 		   
-		    // TEST CAMERA 2
-	  
-	  var secondCameraEl = document.querySelector('#camera2');
-       secondCameraEl.setAttribute('camera', 'active', true);
-	  
-	  //END TEST CAM2
-    
+	   //TEST DETAIL
+	   this.landscape = document.querySelector('#landscapes');
+    this.detail1 = document.querySelector('#detail1');
+     this.landscape.setAttribute('visible', false);
+        this.detail1.setAttribute('visible', true);
+	
+		   
     }
   
     

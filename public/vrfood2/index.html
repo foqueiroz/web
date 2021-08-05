@@ -28,8 +28,8 @@
        <a-sky src="#sky" material="fog: false"></a-sky>
        <!-- a-sky color="#6EBAFF"></a-sky -->
        
- <!-- Floor -->
-       <a-cylinder position="0 0 0" radius="100" height=".1" color="#FFC65D"></a-cylinder>
+ <!-- Floor >
+       <a-cylinder position="0 0 0" radius="100" height=".1" color="#FFC65D"></a-cylinder -->
        
        
 
@@ -37,10 +37,6 @@
        
 		   
 		   
-		    <!-- TEST CAMERA 2 -->
-        <a-camera id="camera2"  camera="active: false" position="-1 1.0 -1" rotation="0 0 270" look-controls look-controls-enabled></a-camera>
-         <!-- end test-->
-         
          
        </a-entity>
     
@@ -70,9 +66,24 @@
          </a-entity>
 
 
+		 <!-- DETAIL 1 -->
+		 <a-entity 
+          id="detail1" 
+          obj-model="obj: #beefscene-obj; 
+          mtl: #beefscene-mtl"
+          scale="5 5 5"
+          position="0 -2 3"
+          visible="false"
+      ></a-entity>
+		 
+		 <!-- END DETAIL 1 --> 
+		 
+		 
+		 
+		 
        <!-- LADNSCAPES -->
     
-    <a-entity id="landscapes" position="0 0 0">
+    <a-entity id="landscapes" position="0 0 0" visible="true">
 <!-- LEFT SIDE -->
        
        <a-entity
