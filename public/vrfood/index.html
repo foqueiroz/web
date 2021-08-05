@@ -33,13 +33,13 @@
        
        
   
-       <!-- a-entity camera="active: true" look-controls id="cam">
+       <a-entity camera="active: true" position="0 1.6 0" id="camera" look-controls>
        
         
          
          
          
-       </a-entity -->
+       </a-entity>
     
      
         <a-entity id="menu" menu position="0 1.2 -0.4" rotation="-90 0 0" event-manager>
@@ -66,10 +66,47 @@
          
          </a-entity>
 
-
-       <!-- LADNSCAPES -->
+        <!-- a-entity 
+          id="beefleft" 
+          obj-model="obj: #beefscene-obj; 
+          mtl: #beefscene-mtl"
+          scale="0.01 0.01 0.01"
+          position="-1 1 -1"
+          visible="true"
+      ></a-entity>
+       
+        </a-assets>
+        <a-entity 
+          id="cheeseleft" 
+          obj-model="obj: #beefscene-obj; 
+          mtl: #beefscene-mtl"
+          scale="0.01 0.01 0.01"
+          position="-1 1 -1"
+          rotation="0 90 0"
+          visible="false"
+      ></a-entity>
+       
+            <a-entity 
+          id="tofuleft" 
+          obj-model="obj: #beefscene-obj; 
+          mtl: #beefscene-mtl"
+          scale="0.01 0.01 0.01"
+          position="-1 1 -1"
+          rotation="0 180 0"
+          visible="false"
+      ></a-entity>
     
-    <a-entity id="landscapes" position="0 0 0">
+              <a-entity 
+          id="prawnleft" 
+          obj-model="obj: #beefscene-obj; 
+          mtl: #beefscene-mtl"
+          scale="0.01 0.01 0.01"
+          position="-1 1 -1"
+          rotation="0 270 0"
+          visible="false"
+      ></a-entity -->
+    
+    
 <!-- LEFT SIDE -->
        
        <a-entity
@@ -168,11 +205,6 @@
         visible="false"
         scale="0.5 0.5 0.5"
       ></a-entity>
-      
-      
-      
-      <!-- closes landscapes -->
-      </a-entity>
        
        
        
@@ -196,73 +228,24 @@
        
        
          <script>
-           
-           
-            if (AFRAME.utils.device.checkHeadsetConnected() ||
-      AFRAME.utils.device.isMobile()) {
-            
-            } else {
-              var sceneEl = document.querySelector('a-scene');
-              var entityEl = document.createElement('a-camera');
-              entityEl.setAttribute('position', '0 1.6 0');
-              sceneEl.appendChild(entityEl);
-         
-        
-          //    document.querySelector('#cam').object3D.position.y = 1.6;
-          //    document.querySelector('#menu') .object3D.position.y = 1.3;
-            }
-           
-           document.querySelector('a-scene').addEventListener('enter-vr', function () {
-  // console.log("ENTERED VR");
-        setTimeout(() => {  
-        
-          //  this.cameEl = document.querySelector('#cam');
- //   this.menueEl = document.querySelector('#menu');
-    //         this.landEl = document.querySelector('#landscapes');
-    
-      //    if(this.cameEl.object3D.position.y){
-   // this.menueEl.object3D.position.y = this.cameEl.object3D.position.y - 0.3;
-   //          this.landEl.object3D.position.y = this.cameEl.object3D.position.y - 1.0;
-      //    }
-        
-        
-        }, 10);     
+        var draggable = document.querySelector('[click-drag]');
+        draggable.addEventListener('dragstart', function(dragInfo) {
+          draggable.components['dynamic-body'].pause();
+        });
+        draggable.addEventListener('dragend', function(dragInfo) {
+          var x = dragInfo.detail.velocity.x;
+          var y = dragInfo.detail.velocity.y;
+          var z = dragInfo.detail.velocity.z;
 
-             //alert(this.cameEl.object3D.position.y );
-            // alert(this.menueEl.object3D.position.y );
-             
-});
-          
-           
-           
-           
-      
-           
-     
-      </script -->
-       
-       <script>
-       
-           
-        //var draggable = document.querySelector('[click-drag]');
-        //draggable.addEventListener('dragstart', function(dragInfo) {
-        //  draggable.components['dynamic-body'].pause();
-        //});
-        //draggable.addEventListener('dragend', function(dragInfo) {
-        //  var x = dragInfo.detail.velocity.x;
-        //  var y = dragInfo.detail.velocity.y;
-        //  var z = dragInfo.detail.velocity.z;
-
-        //  draggable.components['dynamic-body'].play();
-        //  draggable.body.velocity.set(x, y, z);
-        //  console.log('drag end', dragInfo.detail.velocity);
-       // });
+          draggable.components['dynamic-body'].play();
+          draggable.body.velocity.set(x, y, z);
+          console.log('drag end', dragInfo.detail.velocity);
+        });
       </script>
-        
-
         
        
     </a-scene>
     
   </body>
 </html>
+
