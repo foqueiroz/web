@@ -65,7 +65,8 @@ AFRAME.registerComponent('event-manager', {
     this.rightpyramidButtonEl.addEventListener('click', this.onClick);
     
     this.rightsphereButtonEl.addState('pressed');
-    
+	  
+	 
     
     
   },
@@ -107,6 +108,15 @@ AFRAME.registerComponent('event-manager', {
       this.righttorusGeometryEl.object3D.visible = false;
       this.rightpyramidGeometryEl.object3D.visible = false;
       this.buttonToGeometry[targetEl.id].object3D.visible = true;
+		   
+		   
+		    // TEST CAMERA 2
+	  
+	  var secondCameraEl = document.querySelector('#camera2');
+       secondCameraEl.setAttribute('camera', 'active', true);
+	  
+	  //END TEST CAM2
+    
     }
   
     
