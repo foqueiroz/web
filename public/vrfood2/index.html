@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hand Tracking! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="aframe-master.js"></script>
+    <!-- script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script -->
+    <script src="pinchable.js"></script>
+    <script src="color-change.js"></script>
+    <script src="slider.js"></script>
+    <script src="size-change.js"></script>
+    <script src="button.js"></script>
+    <script src="menu.js"></script>
+    <script src="pressable.js"></script>
+    <script src="event-manager.js"></script>
+  </head>
+  <body>
+ 
+     <a-scene environment   cursor="rayOrigin: mouse; fuse: false" physics="debug: true" fog="type: linear; color: #000; near: 1; far:100">
+        <a-assets>
+    <a-assets>
+    <img id="sky" src="sky.png">
+  </a-assets>
+    <a-asset-item id="beefscene-obj" src="blocks.obj"></a-asset-item>
+    <a-asset-item id="beefscene-mtl" src="blocks.mtl"></a-asset-item>
+  </a-assets>
+       <a-sky src="#sky" material="fog: false"></a-sky>
+       <!-- a-sky color="#6EBAFF"></a-sky -->
+       
+ <!-- Floor -->
+       <a-cylinder position="0 0 0" radius="100" height=".1" color="#FFC65D"></a-cylinder>
+       
+       
+  
+       <a-entity camera="active: true" position="0 1.6 0" look-controls id="cam">
+       
+        
+         
+         
+         
+       </a-entity>
+    
+     
+        <a-entity id="menu" menu position="0 1.2 -0.4" rotation="-90 0 0" event-manager>
+        <!-- a-entity slider position="0 0.10 0"></a-entity -->
+        
+        <!-- LEFT SIDE BUTTONS -->   
+        <a-entity id="beefLeftButton" button="label: beef" position="-0.2 0.06 0" class="raycastable"></a-entity>
+        <a-entity id="cheeseLeftButton" button="label: cheese" position="-0.2 0 0" class="raycastable"></a-entity>
+        <a-entity id="tofuLeftButton"button="label: tofu" position="-0.2 -0.06 0" class="raycastable"></a-entity>
+        <a-entity id="prawnLeftButton"button="label: prawn" position="-0.2 -0.12 0" class="raycastable"></a-entity>
+        
+      
+           <!-- RIGHT SIDE BUTTONS -->   
+        <a-entity id="beefRightButton" button="label: beef" position="0.2 0.06 0" class="raycastable"></a-entity>
+        <a-entity id="cheeseRightButton" button="label: cheese" position="0.2 0 0" class="raycastable"></a-entity>
+        <a-entity id="tofuRightButton"button="label: tofu" position="0.2 -0.06 0" class="raycastable"></a-entity>
+        <a-entity id="prawnRightButton"button="label: prawn" position="0.2 -0.12 0" class="raycastable"></a-entity>
+        
+           
+        <!-- a-entity id="darkModeButton" button="label: Dark Mode; width: 0.20; toggable: true" position="0 -0.10 0"></a-entity -->
+      
+         
+         
+         
+         </a-entity>
+
+
+       <!-- LADNSCAPES -->
+    
+    <a-entity id="landscapes" position="0 0 0">
+<!-- LEFT SIDE -->
+       
+       <a-entity
+        id="beefLeft"
+        position="-1 1.0 -1"
+        rotation="0 0 0"
+        geometry="primitive: box; height: 0.6; width: 0.6; depth: 0.6"
+        material="color: #ff4b5c"
+        size-change
+        visible="true"
+        scale="0.5 0.5 0.5"
+      >
+         <a-entity 
+          id="beefleft" 
+          obj-model="obj: #beefscene-obj; 
+          mtl: #beefscene-mtl"
+          scale="0.1 0.1 0.1"
+          position="0 0 0"
+          visible="true"
+      ></a-entity>
+       
+       
+       </a-entity>
+       <a-entity
+        id="cheeseLeft"
+        position="-1 1.0 -1"
+        rotation="0 0 0"
+        geometry="primitive: torus; radius: 0.4; radius-tubular: 0.06"
+        material="color: #d2e603"
+        size-change
+        visible="false"
+        scale="0.5 0.5 0.5"
+      ></a-entity>
+       <a-entity
+        id="tofuLeft"
+        position="-1 1.0 -1"
+        rotation="0 0 0"
+        geometry="primitive: sphere; radius: 0.6;"
+        material="color: #000000"
+        size-change
+        visible="false"
+        scale="0.5 0.5 0.5"
+      ></a-entity>
+        <a-entity
+        id="prawnLeft"
+        position="-1 1.0 -1"
+        rotation="0 0 0"
+        geometry="primitive: sphere; radius: 0.6;"
+        material="color: #ffffff"
+        size-change
+        visible="false"
+        scale="0.5 0.5 0.5"
+      ></a-entity>
+      
+       
+    
+<!-- RIGHT SIDE -->
+       
+       <a-entity
+        id="beefRight"
+        position="1 1 -1"
+        rotation="0 0 0"
+        geometry="primitive: box; height: 0.6; width: 0.6; depth: 0.6"
+        material="color: #ff4b5c"
+        size-change
+        visible="false"
+        scale="0.5 0.5 0.5"
+      ></a-entity>
+       <a-entity
+        id="cheeseRight"
+        position="1 1 -1"
+        rotation="0 0 0"
+        geometry="primitive: torus; radius: 0.4; radius-tubular: 0.06"
+        material="color: #d2e603"
+        size-change
+        visible="true"
+        scale="0.5 0.5 0.5"
+      ></a-entity>
+       <a-entity
+        id="tofuRight"
+        position="1 1 -1"
+        rotation="0 0 0"
+        geometry="primitive: sphere; radius: 0.6;"
+        material="color: #000000"
+        size-change
+        visible="false"
+        scale="0.5 0.5 0.5"
+      ></a-entity>
+        <a-entity
+        id="prawnRight"
+        position="1 1 -1"
+        rotation="0 0 0"
+        geometry="primitive: sphere; radius: 0.6;"
+        material="color: #ffffff"
+        size-change
+        visible="false"
+        scale="0.5 0.5 0.5"
+      ></a-entity>
+      
+      
+      
+      <!-- closes landscapes -->
+      </a-entity>
+       
+       
+       
+       
+       
+       
+       
+       
+      <a-entity hand-tracking-controls="hand: left"></a-entity>
+      <a-entity hand-tracking-controls="hand: right"></a-entity>
+       
+       <a-entity oculus-touch-controls="hand: left"></a-entity>
+      <a-entity oculus-touch-controls="hand: right"></a-entity>
+       
+      <a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: .raycastable"></a-entity>
+      <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
+
+       
+         
+       
+       
+       
+         <script>
+           
+            if (AFRAME.utils.device.checkHeadsetConnected() ||
+      AFRAME.utils.device.isMobile()) {
+            
+            } else {
+              document.querySelector('#cam').object3D.position.y = 1.6;
+              document.querySelector('#menu').object3D.position.y = 1.3;
+            }
+           
+           document.querySelector('a-scene').addEventListener('enter-vr', function () {
+  // console.log("ENTERED VR");
+        setTimeout(() => {  
+        
+            this.cameEl = document.querySelector('#cam');
+    this.menueEl = document.querySelector('#menu');
+             this.landEl = document.querySelector('#landscapes');
+    
+    this.menueEl.object3D.position.y = this.cameEl.object3D.position.y - 0.3;
+             this.landEl.object3D.position.y = this.cameEl.object3D.position.y - 1.6;
+        
+        
+        }, 10);     
+
+             //alert(this.cameEl.object3D.position.y );
+            // alert(this.menueEl.object3D.position.y );
+             
+});
+           
+           
+        //var draggable = document.querySelector('[click-drag]');
+        //draggable.addEventListener('dragstart', function(dragInfo) {
+        //  draggable.components['dynamic-body'].pause();
+        //});
+        //draggable.addEventListener('dragend', function(dragInfo) {
+        //  var x = dragInfo.detail.velocity.x;
+        //  var y = dragInfo.detail.velocity.y;
+        //  var z = dragInfo.detail.velocity.z;
+
+        //  draggable.components['dynamic-body'].play();
+        //  draggable.body.velocity.set(x, y, z);
+        //  console.log('drag end', dragInfo.detail.velocity);
+       // });
+      </script>
+        
+       
+    </a-scene>
+    
+  </body>
+</html>
