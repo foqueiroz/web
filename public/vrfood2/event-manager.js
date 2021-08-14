@@ -113,10 +113,10 @@ AFRAME.registerComponent('event-manager', {
 		   
 		   
 	   //TEST DETAIL
-	   this.landscape = document.querySelector('#landscapes');
-    this.detail1 = document.querySelector('#detail1');
-     this.landscape.setAttribute('visible', false);
-        this.detail1.setAttribute('visible', true);
+	  // this.landscape = document.querySelector('#landscapes');
+    //this.detail1 = document.querySelector('#detail1');
+    // this.landscape.setAttribute('visible', false);
+      //  this.detail1.setAttribute('visible', true);
 	
 		   
     }
