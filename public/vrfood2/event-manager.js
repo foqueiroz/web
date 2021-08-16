@@ -90,7 +90,7 @@ AFRAME.registerComponent('event-manager', {
 
   onClick: function (evt) {
 	  
-	   this.camEl.components['food-look-controls'].pitchObject.rotation.x;
+	   alert(this.camEl.components['food-look-controls'].pitchObject.rotation.x);
 	  
 	  
     var targetEl = evt.target;
