@@ -89,6 +89,10 @@ AFRAME.registerComponent('event-manager', {
   },
 
   onClick: function (evt) {
+	  
+	   this.camEl.components['food-look-controls'].pitchObject.rotation.x;
+	  
+	  
     var targetEl = evt.target;
     if (targetEl === this.boxButtonEl ||
         targetEl === this.sphereButtonEl ||
