@@ -39,7 +39,7 @@ AFRAME.registerComponent('event-manager', {
 	  if(AFRAME.utils.device.checkHeadsetConnected ()){
 		  
 	  } else {
-		  this.camEl.components['food-look-controls'].pitchObject.rotation.x -= 18;
+		  this.camEl.components['food-look-controls'].pitchObject.rotation.x -= 20;
 	  }
     
     //this.menuEl.object3D.position.y = this.camEl.object3D.position.y - 0.4;
@@ -90,7 +90,7 @@ AFRAME.registerComponent('event-manager', {
 
   onClick: function (evt) {
 	  
-	   alert(this.camEl.components['food-look-controls'].pitchObject.rotation.x);
+	   alert(this.camEl.object3D.rotation.x);
 	  
 	  
     var targetEl = evt.target;
