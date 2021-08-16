@@ -1,7 +1,7 @@
 /* global DeviceOrientationEvent  */
-var registerComponent = require('aframe/src/core/component').registerComponent;
-var THREE = require('aframe/src/lib/three');
-var utils = require('aframe/src/utils/');
+var registerComponent = AFRAME.registerComponent;
+var THREE = window.THREE;
+var utils = AFRAME.registerComponent.utils;
 var bind = utils.bind;
 
 // To avoid recalculation at every mouse movement tick
@@ -10,7 +10,7 @@ var PI_2 = Math.PI / 2;
 /**
  * look-controls. Update entity pose, factoring mouse, touch, and WebVR API data.
  */
-module.exports.Component = registerComponent('food-look-controls', {
+registerComponent('food-look-controls', {
   dependencies: ['position', 'rotation'],
 
   schema: {
