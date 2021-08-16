@@ -34,12 +34,12 @@ AFRAME.registerComponent('event-manager', {
 	//this.camEl.setAttribute('look-controls', {enabled: 'true'});
 	  
 	  
-	  this.camEl.components['food-look-controls'].yawObject.rotation.y += 90;
+	
 	  
 	  if(AFRAME.utils.device.checkHeadsetConnected ()){
 		  
 	  } else {
-		//this.camEl.setAttribute('fov', {preset: 'starry'});
+		  this.camEl.components['food-look-controls'].pitchObject.rotation.y -= 20;
 	  }
     
     //this.menuEl.object3D.position.y = this.camEl.object3D.position.y - 0.4;
