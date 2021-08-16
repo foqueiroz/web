@@ -31,7 +31,7 @@ registerComponent('food-look-controls', {
     this.magicWindowDeltaEuler = new THREE.Euler();
     this.position = new THREE.Vector3();
     this.magicWindowObject = new THREE.Object3D();
-    this.rotation = new THREE.Euler( 20, 0, 0, 'XYZ');
+    this.rotation = new THREE.Euler( 90, 0, 0, 'XYZ');
     this.deltaRotation = {};
     this.savedPose = null;
     this.pointerLocked = false;
@@ -44,7 +44,7 @@ registerComponent('food-look-controls', {
     // To save / restore camera pose
     this.savedPose = {
       position: new THREE.Vector3(),
-      rotation: new THREE.Euler( 20, 0, 0, 'XYZ')
+      rotation: new THREE.Euler( 90, 0, 0, 'XYZ')
    
     };
 
@@ -396,7 +396,7 @@ registerComponent('food-look-controls', {
     if (!sceneEl.checkHeadsetConnected()) { return; }
     this.saveCameraPose();
     this.el.object3D.position.set(0, 0, 0);
-    this.el.object3D.rotation.set(0, 0, 0);
+    this.el.object3D.rotation.set(90, 0, 0);
     if (sceneEl.hasWebXR) {
       this.el.object3D.matrixAutoUpdate = false;
       this.el.object3D.updateMatrix();
