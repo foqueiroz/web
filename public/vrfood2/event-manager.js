@@ -31,7 +31,7 @@ AFRAME.registerComponent('event-manager', {
     this.camEl = document.querySelector('#cam');
     this.menuEl = document.querySelector('#menu');
 	  
-	this.camEl.setAttribute('look-controls', {enabled: 'true'});
+	//this.camEl.setAttribute('look-controls', {enabled: 'true'});
 	  
 	  if(AFRAME.utils.device.checkHeadsetConnected ()){
 		  
