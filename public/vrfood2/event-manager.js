@@ -36,7 +36,7 @@ AFRAME.registerComponent('event-manager', {
 	  if(AFRAME.utils.device.checkHeadsetConnected ()){
 		  
 	  } else {
-		this.camEl.object3D.position.y = 1;  
+		//this.camEl.setAttribute('fov', {preset: 'starry'});
 	  }
     
     //this.menuEl.object3D.position.y = this.camEl.object3D.position.y - 0.4;
