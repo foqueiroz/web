@@ -1,7 +1,7 @@
 /* global DeviceOrientationEvent  */
-var registerComponent = require('aframe/core/component').registerComponent;
-var THREE = require('aframe/lib/three');
-var utils = require('aframe/utils/');
+var registerComponent = require('aframe/src/core/component').registerComponent;
+var THREE = require('aframe/src/lib/three');
+var utils = require('aframe/src/utils/');
 var bind = utils.bind;
 
 // To avoid recalculation at every mouse movement tick
