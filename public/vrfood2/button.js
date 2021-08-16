@@ -9,7 +9,7 @@ AFRAME.registerComponent('button', {
     var el = this.el;
     var labelEl = this.labelEl = document.createElement('a-entity');
 
-    this.color = '#3a50c5';
+    this.color = 'black';
     el.setAttribute('geometry', {
       primitive: 'box',
       width: this.data.width,
