@@ -32,6 +32,12 @@ AFRAME.registerComponent('event-manager', {
     this.menuEl = document.querySelector('#menu');
 	  
 	this.camEl.setAttribute('look-controls', {enabled: 'true'});
+	  
+	  if(AFRAME.utils.device.checkHeadsetConnected ()){
+		  
+	  } else {
+		this.camEl.object3D.position.y = 1;  
+	  }
     
     //this.menuEl.object3D.position.y = this.camEl.object3D.position.y - 0.4;
     
