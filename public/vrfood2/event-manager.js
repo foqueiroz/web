@@ -33,7 +33,8 @@ AFRAME.registerComponent('event-manager', {
 	  
 	//this.camEl.setAttribute('look-controls', {enabled: 'true'});
 	  
-	   console.log(this.camEl.object3D.rotation);
+	  
+	  this.camEl.components['food-look-controls'].yawObject.rotation.y += 90;
 	  
 	  if(AFRAME.utils.device.checkHeadsetConnected ()){
 		  
