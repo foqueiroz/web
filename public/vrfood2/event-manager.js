@@ -33,6 +33,8 @@ AFRAME.registerComponent('event-manager', {
 	  
 	//this.camEl.setAttribute('look-controls', {enabled: 'true'});
 	  
+	   console.log(/this.camEl.object3D.rotation);
+	  
 	  if(AFRAME.utils.device.checkHeadsetConnected ()){
 		  
 	  } else {
