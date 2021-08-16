@@ -1,7 +1,7 @@
 /* global DeviceOrientationEvent  */
 var registerComponent = AFRAME.registerComponent;
 var THREE = window.THREE;
-var utils = AFRAME.registerComponent.utils;
+var utils = AFRAME.utils;
 var bind = utils.bind;
 
 // To avoid recalculation at every mouse movement tick
