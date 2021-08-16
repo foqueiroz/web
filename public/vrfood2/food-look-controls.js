@@ -44,7 +44,7 @@ registerComponent('food-look-controls', {
     // To save / restore camera pose
     this.savedPose = {
       position: new THREE.Vector3(),
-      rotation: new THREE.Euler( 10, 0, 5, 'XYZ')
+      rotation: new THREE.Euler( 20, 0, 0, 'XYZ')
    
     };
 
@@ -82,8 +82,8 @@ registerComponent('food-look-controls', {
 
     // Reset magic window eulers if tracking is disabled.
     if (oldData && !data.magicWindowTrackingEnabled && oldData.magicWindowTrackingEnabled) {
-      this.magicWindowAbsoluteEuler.set(0, 0, 0);
-      this.magicWindowDeltaEuler.set(0, 0, 0);
+      this.magicWindowAbsoluteEuler.set(20, 0, 0);
+      this.magicWindowDeltaEuler.set(20, 0, 0);
     }
 
     // Pass on magic window tracking setting to magicWindowControls.
@@ -396,7 +396,7 @@ registerComponent('food-look-controls', {
     if (!sceneEl.checkHeadsetConnected()) { return; }
     this.saveCameraPose();
     this.el.object3D.position.set(0, 0, 0);
-    this.el.object3D.rotation.set(0, 0, 0);
+    this.el.object3D.rotation.set(20, 0, 0);
     if (sceneEl.hasWebXR) {
       this.el.object3D.matrixAutoUpdate = false;
       this.el.object3D.updateMatrix();
