@@ -31,7 +31,7 @@ registerComponent('food-look-controls', {
     this.magicWindowDeltaEuler = new THREE.Euler();
     this.position = new THREE.Vector3();
     this.magicWindowObject = new THREE.Object3D();
-    this.rotation = {20 0 0};
+    this.rotation = new THREE.Euler( 20, 0, 0, 'XYZ');
     this.deltaRotation = {};
     this.savedPose = null;
     this.pointerLocked = false;
