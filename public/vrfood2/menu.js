@@ -5,15 +5,15 @@ AFRAME.registerComponent('menu', {
     var menuBackGroundEl = document.createElement('a-entity');
     menuBackGroundEl.setAttribute('geometry', {
       primitive: 'box',
-      width: 0.6,
-      height: 0.40,
+      width: 1,
+      height: 1,
       depth: 0.01
       
     });
     menuBackGroundEl.setAttribute('material', {
-      color: 'blue',
+      color: 'brown',
       transparent: 'true',
-      opacity: 0.2,
+      opacity: 1,
       visible: 'true'
     });
     menuBackGroundEl.setAttribute('position', '0 0 -0.025');
