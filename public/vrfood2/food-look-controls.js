@@ -44,7 +44,8 @@ registerComponent('food-look-controls', {
     // To save / restore camera pose
     this.savedPose = {
       position: new THREE.Vector3(),
-      rotation: new THREE.Euler()
+      rotation: new THREE.Euler( 10, 0, 5, 'XYZ')
+   
     };
 
     // Call enter VR handler if the scene has entered VR before the event listeners attached.
