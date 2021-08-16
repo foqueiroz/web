@@ -90,7 +90,7 @@ AFRAME.registerComponent('event-manager', {
 
   onClick: function (evt) {
 	  
-	   alert(this.camEl.object3D.rotation.x);
+	   //alert(this.camEl.object3D.rotation.x);
 	  
 	  
     var targetEl = evt.target;
