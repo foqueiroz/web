@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>VR Food 0.00029</title>
+    <title>VR Food 0.00030</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="aframe-master.js"></script>
     <!-- script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script -->
@@ -24,7 +24,10 @@
     <a-assets>
     <img id="sky" src="sky.png">
   </a-assets>
-	<a-asset-item id="beefscene-obj" src="food2.gltf"></a-asset-item>
+	<a-asset-item id="beefscene-obj" src="beef.gltf"></a-asset-item>
+		<a-asset-item id="cheesescene-obj" src="cheese.gltf"></a-asset-item>
+		<a-asset-item id="tofuscene-obj" src="tofu.gltf"></a-asset-item>
+		<!-- a-asset-item id="beefscene-obj" src="food2.gltf"></a-asset-item -->
     <!-- a-asset-item id="beefscene-obj" src="blocks_8.obj"></a-asset-item>
     <a-asset-item id="beefscene-mtl" src="blocks_8.mtl"></a-asset-item -->
   </a-assets>
@@ -108,28 +111,17 @@
           position="-0.5 1 -1"
           visible="true"></a-entity>
        
-       
+         <a-entity  id="cheeseLeft"  gltf-model="#cheesescene-obj"  scale="0.1 0.1 0.1"
+          position="-0.5 1 -1"
+          visible="false"></a-entity>
+	    
+	     <a-entity  id="tofuLeft"  gltf-model="#tofuscene-obj"  scale="0.1 0.1 0.1"
+          position="-0.5 1 -1"
+          visible="false"></a-entity>
+	    
+	    
      
-       <a-entity
-        id="cheeseLeft"
-        position="-1 1.0 -1"
-        rotation="0 0 0"
-        geometry="primitive: torus; radius: 0.4; radius-tubular: 0.06"
-        material="color: #d2e603"
-        size-change
-        visible="false"
-        scale="0.5 0.5 0.5"
-      ></a-entity>
-       <a-entity
-        id="tofuLeft"
-        position="-1 1.0 -1"
-        rotation="0 0 0"
-        geometry="primitive: sphere; radius: 0.6;"
-        material="color: #000000"
-        size-change
-        visible="false"
-        scale="0.5 0.5 0.5"
-      ></a-entity>
+      
         <a-entity
         id="prawnLeft"
         position="-1 1.0 -1"
