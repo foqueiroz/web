@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>VR Food 0.00026</title>
+    <title>VR Food 0.00028</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="aframe-master.js"></script>
     <!-- script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script -->
@@ -24,8 +24,9 @@
     <a-assets>
     <img id="sky" src="sky.png">
   </a-assets>
-    <a-asset-item id="beefscene-obj" src="blocks_8.obj"></a-asset-item>
-    <a-asset-item id="beefscene-mtl" src="blocks_8.mtl"></a-asset-item>
+	<a-asset-item id="beefscene-obj" src="food.gltf"></a-asset-item>
+    <!-- a-asset-item id="beefscene-obj" src="blocks_8.obj"></a-asset-item>
+    <a-asset-item id="beefscene-mtl" src="blocks_8.mtl"></a-asset-item -->
   </a-assets>
        <a-sky src="#sky" material="fog: false"></a-sky>
        <!-- a-sky color="#6EBAFF"></a-sky -->
@@ -69,16 +70,19 @@
          
          </a-entity>
 
+	       <a-entity  id="detail1"  gltf-model="#beefscene-obj"  scale="5 5 5"
+          position="0 -2 3"
+          visible="false"></a-entity>
 
 		 <!-- DETAIL 1 -->
-		 <a-entity 
+		 <!-- a-entity 
           id="detail1" 
           obj-model="obj: #beefscene-obj; 
           mtl: #beefscene-mtl"
           scale="5 5 5"
           position="0 -2 3"
           visible="false"
-      ></a-entity>
+      ></a-entity -->
 		 
 		 <!-- END DETAIL 1 --> 
 		 
@@ -91,14 +95,18 @@
 <!-- LEFT SIDE -->
        
     
-         <a-entity 
+         <!-- a-entity 
           id="beefLeft" 
           obj-model="obj: #beefscene-obj; 
           mtl: #beefscene-mtl"
           scale="0.1 0.1 0.1"
           position="-0.5 1 -1"
           visible="true"
-      ></a-entity>
+      ></a-entity -->
+	    
+	     <a-entity  id="beefLeft"  gltf-model="#beefscene-obj"  scale="0.1 0.1 0.1"
+          position="-0.5 1 -1"
+          visible="true"></a-entity>
        
        
      
