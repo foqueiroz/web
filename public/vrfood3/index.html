@@ -2,28 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>VR Food 0.00051</title>
+    <title>VR Food 0.00052</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="aframe-master.js"></script>
     <!-- script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script -->
 	        <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
 	   <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-	  
-	  <!-- MAKE INFO BOX ALWAYS ON TOP -->
-	  <script>
-      AFRAME.registerComponent("overlay", {
-        dependencies: ['material'],
-        init: function () {
-          this.el.sceneEl.renderer.sortObjects = true;
-          this.el.object3D.renderOrder = 100000;
-          this.el.components.material.material.depthTest = false;
-        }
-      });
-    
-    </script>
-	  
-	  <!-- end info box on top -->
-	  
     <script src="pinchable.js"></script>
     <script src="color-change.js"></script>
     <script src="slider.js"></script>
@@ -128,7 +112,7 @@
           position="-1.2 1 -1.5" rotation = "0 -90 0"
           visible="true">
 		
-		   <a-plane position="-1 8 2"  scale="32 16 1" color="#4CC3D9" look-at="[camera]"></a-box>
+		   <a-box position="-1 2 2" rotation="0 45 0" scale="2 2 2" color="#4CC3D9" look-at="[camera]"></a-box>
 			 
 			 
 		</a-entity>
@@ -230,7 +214,6 @@
         
         
         }, 10);     
-
              //alert(this.cameEl.object3D.position.y );
             // alert(this.menueEl.object3D.position.y );
              
@@ -245,7 +228,6 @@
         //  var x = dragInfo.detail.velocity.x;
         //  var y = dragInfo.detail.velocity.y;
         //  var z = dragInfo.detail.velocity.z;
-
         //  draggable.components['dynamic-body'].play();
         //  draggable.body.velocity.set(x, y, z);
         //  console.log('drag end', dragInfo.detail.velocity);
