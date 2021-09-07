@@ -2,12 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>VR Food 0.00046</title>
+    <title>VR Food 0.00047</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="aframe-master.js"></script>
     <!-- script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script -->
 	        <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
 	   <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+	  
+	  <!-- MAKE INFO BOX ALWAYS ON TOP -->
+	  <script>
+      AFRAME.registerComponent("overlay", {
+        dependencies: ['material'],
+        init: function () {
+          this.el.sceneEl.renderer.sortObjects = true;
+          this.el.object3D.renderOrder = 100000;
+          this.el.components.material.material.depthTest = false;
+        }
+      });
+    
+    </script>
+	  
+	  <!-- end info box on top -->
+	  
     <script src="pinchable.js"></script>
     <script src="color-change.js"></script>
     <script src="slider.js"></script>
@@ -112,7 +128,7 @@
           position="-1.2 1 -1.5" rotation = "0 -90 0"
           visible="true">
 		
-		   <a-plane position="-1 2 2" rotation="0 45 0" scale="2 2 2" color="#4CC3D9" look-at="[camera]"></a-box>
+		   <a-plane overlay position="-1 2 2" rotation="0 45 0" scale="2 2 2" color="#4CC3D9" look-at="[camera]"></a-box>
 			 
 			 
 		</a-entity>
