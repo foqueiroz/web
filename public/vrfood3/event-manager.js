@@ -9,23 +9,23 @@ AFRAME.registerComponent('event-manager', {
     this.boxGeometryEl = document.querySelector('#beefLeft');
     this.sphereGeometryEl = document.querySelector('#cheeseLeft');
     this.torusGeometryEl = document.querySelector('#tofuLeft');
-    this.pyramidGeometryEl = document.querySelector('#prawnLeft');
+  
 
     this.boxButtonEl = document.querySelector('#beefLeftButton');
     this.sphereButtonEl = document.querySelector('#cheeseLeftButton');
     this.torusButtonEl = document.querySelector('#tofuLeftButton');
-    this.pyramidButtonEl = document.querySelector('#prawnLeftButton');
+
     
     
     this.rightboxGeometryEl = document.querySelector('#beefRight');
     this.rightsphereGeometryEl = document.querySelector('#cheeseRight');
     this.righttorusGeometryEl = document.querySelector('#tofuRight');
-    this.rightpyramidGeometryEl = document.querySelector('#prawnRight');
+
 
     this.rightboxButtonEl = document.querySelector('#beefRightButton');
     this.rightsphereButtonEl = document.querySelector('#cheeseRightButton');
     this.righttorusButtonEl = document.querySelector('#tofuRightButton');
-    this.rightpyramidButtonEl = document.querySelector('#prawnRightButton');
+  
     
     
     this.camEl = document.querySelector('#cam');
@@ -53,12 +53,12 @@ AFRAME.registerComponent('event-manager', {
     this.buttonToGeometry = {
       'beefLeftButton': this.boxGeometryEl,
       'cheeseLeftButton': this.sphereGeometryEl,
-      'prawnLeftButton': this.pyramidGeometryEl,
+  
       'tofuLeftButton': this.torusGeometryEl,
       
       'beefRightButton': this.rightboxGeometryEl,
       'cheeseRightButton': this.rightsphereGeometryEl,
-      'prawnRightButton': this.rightpyramidGeometryEl,
+ 
       'tofuRightButton': this.righttorusGeometryEl,
       
     };
