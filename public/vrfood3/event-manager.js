@@ -53,27 +53,24 @@ AFRAME.registerComponent('event-manager', {
     this.buttonToGeometry = {
       'beefLeftButton': this.boxGeometryEl,
       'cheeseLeftButton': this.sphereGeometryEl,
-  
-      'tofuLeftButton': this.torusGeometryEl,
-      
-      'beefRightButton': this.rightboxGeometryEl,
+		'tofuLeftButton': this.torusGeometryEl,
+		'beefRightButton': this.rightboxGeometryEl,
       'cheeseRightButton': this.rightsphereGeometryEl,
- 
-      'tofuRightButton': this.righttorusGeometryEl,
+		'tofuRightButton': this.righttorusGeometryEl,
       
     };
 
     this.boxButtonEl.addEventListener('click', this.onClick);
     this.sphereButtonEl.addEventListener('click', this.onClick);
     this.torusButtonEl.addEventListener('click', this.onClick);
-    this.pyramidButtonEl.addEventListener('click', this.onClick);
+    
     //this.darkModeButtonEl.addEventListener('click', this.onClick);
     this.boxButtonEl.addState('pressed');
     
     this.rightboxButtonEl.addEventListener('click', this.onClick);
     this.rightsphereButtonEl.addEventListener('click', this.onClick);
     this.righttorusButtonEl.addEventListener('click', this.onClick);
-    this.rightpyramidButtonEl.addEventListener('click', this.onClick);
+   
     
     this.rightsphereButtonEl.addState('pressed');
 	  
