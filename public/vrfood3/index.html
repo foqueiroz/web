@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>VR Food 0.00059</title>
+    <title>VR Food 0.00060</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="aframe-master.js"></script>
     <!-- script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script -->
@@ -19,7 +19,7 @@
 	   <script src="food-look-controls.js"></script>
   </head>
   <body>
- <div id="nextbutton" style="display: block; z-index: 10;   width: 50vw;
+ <!-- div id="nextbutton" style="display: block; z-index: 10;   width: 50vw;
   height: auto;
   position: absolute;
   bottom: 6vh;
@@ -28,7 +28,7 @@
   border: 0.2em solid white;
   text-align: center;
   color: #FFF;
-  border-radius: 100px;"></div>
+  border-radius: 100px;"></div -->
      <a-scene environment   cursor="rayOrigin: mouse; fuse: false" physics="debug: true" fog="type: linear; color: #000; near: 1; far:100">
         <a-assets>
     <a-assets>
@@ -83,10 +83,7 @@
          
          </a-entity>
 
-	       <a-entity  id="detail1"  gltf-model="#beefscene-obj"  scale="5 5 5"
-          position="0 -2 3"
-          visible="false"></a-entity>
-
+	     
 		 <!-- DETAIL 1 -->
 		 <!-- a-entity 
           id="detail1" 
@@ -121,7 +118,7 @@
           position="-1.2 1 -1.5" rotation = "0 -90 0"
           visible="true">
 		
-		   <a-box position="-1 2 2" rotation="0 45 0" scale="32 16 2" color="#4CC3D9" look-at="[camera]"></a-box>
+		 
 			 
 			 
 		</a-entity>
