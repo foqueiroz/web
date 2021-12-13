@@ -93,32 +93,32 @@ AFRAME.registerComponent('event-manager', {
     var targetEl = evt.target;
     if (targetEl === this.boxButtonEl ||
         targetEl === this.sphereButtonEl ||
-        targetEl === this.pyramidButtonEl ||
+       
         targetEl === this.torusButtonEl) {
       this.boxButtonEl.removeState('pressed');
       this.sphereButtonEl.removeState('pressed');
       this.torusButtonEl.removeState('pressed');
-      this.pyramidButtonEl.removeState('pressed');
+     
       this.boxGeometryEl.object3D.visible = false;
       this.sphereGeometryEl.object3D.visible = false;
       this.torusGeometryEl.object3D.visible = false;
-      this.pyramidGeometryEl.object3D.visible = false;
+
       this.buttonToGeometry[targetEl.id].object3D.visible = true;
     }
   
     
        if (targetEl === this.rightboxButtonEl ||
         targetEl === this.rightsphereButtonEl ||
-        targetEl === this.rightpyramidButtonEl ||
+ 
         targetEl === this.righttorusButtonEl) {
       this.rightboxButtonEl.removeState('pressed');
       this.rightsphereButtonEl.removeState('pressed');
       this.righttorusButtonEl.removeState('pressed');
-      this.rightpyramidButtonEl.removeState('pressed');
+
       this.rightboxGeometryEl.object3D.visible = false;
       this.rightsphereGeometryEl.object3D.visible = false;
       this.righttorusGeometryEl.object3D.visible = false;
-      this.rightpyramidGeometryEl.object3D.visible = false;
+
       this.buttonToGeometry[targetEl.id].object3D.visible = true;
 		   
 		   
