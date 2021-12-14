@@ -65,14 +65,14 @@ AFRAME.registerComponent('event-manager', {
     this.torusButtonEl.addEventListener('click', this.onClick);
     
     //this.darkModeButtonEl.addEventListener('click', this.onClick);
-    this.boxButtonEl.addState('pressed');
+    //this.boxButtonEl.addState('pressed');
     
     this.rightboxButtonEl.addEventListener('click', this.onClick);
     this.rightsphereButtonEl.addEventListener('click', this.onClick);
     this.righttorusButtonEl.addEventListener('click', this.onClick);
    
     
-    this.rightsphereButtonEl.addState('pressed');
+    //this.rightsphereButtonEl.addState('pressed');
 	  
 	    	
 	  

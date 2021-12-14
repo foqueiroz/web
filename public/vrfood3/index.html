@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>VR Food 0.00069</title>
+    <title>VR Food 0.00070</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="aframe-master.js"></script>
     <!-- script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script -->
@@ -37,6 +37,7 @@
 	<a-asset-item id="beefscene-obj" src="beefscene07.gltf" ></a-asset-item>
 		<a-asset-item id="cheesescene-obj" src="cheesescene07.gltf" ></a-asset-item>
 		<a-asset-item id="tofuscene-obj" src="tofuscene07.gltf" ></a-asset-item>
+			<a-asset-item id="plate-obj" src="plate.gltf" ></a-asset-item>
 		<!-- a-asset-item id="beefscene-obj" src="food2.gltf"></a-asset-item -->
     <!-- a-asset-item id="beefscene-obj" src="blocks_8.obj"></a-asset-item>
     <a-asset-item id="beefscene-mtl" src="blocks_8.mtl"></a-asset-item -->
@@ -48,7 +49,7 @@
                    shadowCameraVisible: false;"
             position="2 4 5"></a-entity -->
        <!-- a-sky color="#6EBAFF"></a-sky -->
-		 	<a-light type="ambient" color="#fff" intensity="2.0"></a-light>
+		 	<a-light type="ambient" color="#fff" intensity="4.0"></a-light>
        
  <!-- Floor >
        <a-cylinder position="0 0 0" radius="100" height=".1" color="#FFC65D"></a-cylinder -->
@@ -119,10 +120,15 @@
           position="-0.5 1 -1"
           visible="true"
       ></a-entity -->
+		
+		<a-entity  id="plate"  gltf-model="#plate-obj"  scale="1 1 1"
+          position="0 0 0 " rotation = "0 0 0"
+          visible="true">
+		
 	    
 	     <a-entity  id="beefLeft"  gltf-model="#beefscene-obj"  scale="0.20 0.20 0.20"
           position="-2.2 1 -1.5" rotation = "0 0 0"
-          visible="true">
+          visible="false">
 		
 		 
 			 
@@ -151,7 +157,7 @@
        
          <a-entity  id="cheeseRight"  gltf-model="#cheesescene-obj"  scale="-0.20 0.20 0.20"
           position="2 1 -1.5" rotation = "0 0 0"
-          visible="true"></a-entity>
+          visible="false"></a-entity>
 	    
 	     <a-entity  id="tofuRight"  gltf-model="#tofuscene-obj" scale="-0.20 0.20 0.20"
           position="2 1 -1.2" rotation = "0 0 0"
