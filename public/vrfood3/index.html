@@ -43,13 +43,14 @@
     <a-asset-item id="beefscene-mtl" src="blocks_8.mtl"></a-asset-item -->
   </a-assets>
        <a-sky src="#sky" material="fog: false"></a-sky>
-		<!-- a-entity light="type: directional;
-                   castShadow: false;
-                   intensity: 1;
-                   shadowCameraVisible: false;"
+		<a-entity light="type: directional;
+                   castShadow: true;
+                   intensity: 2.0;
+                   shadowCameraVisible: false;
+						 color: #fff"
             position="2 4 5"></a-entity -->
        <!-- a-sky color="#6EBAFF"></a-sky -->
-		 	<a-light type="ambient" color="#fff" intensity="4.0"></a-light>
+		 	<a-light type="ambient" color="#fff" intensity="2.0"></a-light>
        
  <!-- Floor >
        <a-cylinder position="0 0 0" radius="100" height=".1" color="#FFC65D"></a-cylinder -->
