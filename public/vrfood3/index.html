@@ -48,7 +48,7 @@
                    intensity: 2.0;
                    shadowCameraVisible: false;
 						 color: #fff"
-            position="2 4 5"></a-entity -->
+            position="2 4 5"></a-entity>
        <!-- a-sky color="#6EBAFF"></a-sky -->
 		 	<a-light type="ambient" color="#666" intensity="0.5"></a-light>
        
@@ -69,9 +69,7 @@
      
         <a-entity id="menu" menu position="0 0.9 -0.45" rotation="-90 0 0" event-manager>
 			
-			<a-entity  id="plate"  gltf-model="#plate-obj"  scale="0.1 0.1 0.1"
-          position="0 0 0 " rotation = "0 0.2 0"
-          visible="true"></a-entity>
+			
         <!-- a-entity slider position="0 0.10 0"></a-entity -->
         
         <!-- LEFT SIDE BUTTONS -->   
@@ -115,7 +113,9 @@
     
     <a-entity id="landscapes" position="0 0 0" visible="true">
 <!-- LEFT SIDE -->
-       
+       <a-entity  id="plate"  gltf-model="#plate-obj"  scale="0.1 0.1 0.1"
+          position="0 0 0 " rotation = "0 0.2 0"
+          visible="true"></a-entity>
     
          <!-- a-entity 
           id="beefLeft" 
