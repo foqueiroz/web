@@ -68,6 +68,10 @@
 	      <!-- a-entity position="0 2.25 -1" particle-system="color: #EF0000,#44CC00; maxParticleCount:100"></a-entity -->
      
         <a-entity id="menu" menu position="0 0.9 -0.45" rotation="-90 0 0" event-manager>
+			
+			<a-entity  id="plate"  gltf-model="#plate-obj"  scale="0.1 0.1 0.1"
+          position="0 0 0 " rotation = "0 0.2 0"
+          visible="true">
         <!-- a-entity slider position="0 0.10 0"></a-entity -->
         
         <!-- LEFT SIDE BUTTONS -->   
@@ -122,13 +126,11 @@
           visible="true"
       ></a-entity -->
 		
-		<a-entity  id="plate"  gltf-model="#plate-obj"  scale="0.3 0.3 0.3"
-          position="0 0 0 " rotation = "0 0 0"
-          visible="true">
+		
 		
 	    
 	     <a-entity  id="beefLeft"  gltf-model="#beefscene-obj"  scale="0.20 0.20 0.20"
-          position="0 1 0" rotation = "0 0 0"
+          position="0 2 0" rotation = "0 0 0"
           visible="false">
 		
 		 
@@ -136,12 +138,12 @@
 			 
 		</a-entity>
        
-         <a-entity  id="cheeseLeft"  gltf-model="#cheesescene-obj"  scale="0.20 0.20 0.20"
-          position="0 1 0" rotation = "0 0 0"
+         <a-entity  id="cheeseLeft"  gltf-model="#cheesescene-obj"  scale="0.50 0.50 0.50"
+          position="0 2 0" rotation = "0 0 0"
           visible="false"></a-entity>
 	    
-	     <a-entity  id="tofuLeft"  gltf-model="#tofuscene-obj"  scale="0.20 0.20 0.20"
-          position="0 1 0" rotation = "0 0 0"
+	     <a-entity  id="tofuLeft"  gltf-model="#tofuscene-obj"  scale="0.50 0.50 0.50"
+          position="0 2 0" rotation = "0 0 0"
           visible="false"></a-entity>
 	    
 	    
@@ -152,16 +154,16 @@
     
 <!-- RIGHT SIDE -->
        
-           <a-entity  id="beefRight"  gltf-model="#beefscene-obj"  scale="-0.20 0.20 0.20"
-          position="0 1 0" rotation = "0 0 0"
+           <a-entity  id="beefRight"  gltf-model="#beefscene-obj"  scale="-0.50 0.50 0.50"
+          position="0 2 0" rotation = "0 0 0"
           visible="false"></a-entity>
        
-         <a-entity  id="cheeseRight"  gltf-model="#cheesescene-obj"  scale="-0.20 0.20 0.20"
-          position="0 1 0" rotation = "0 0 0"
+         <a-entity  id="cheeseRight"  gltf-model="#cheesescene-obj"  scale="-0.50 0.50 0.50"
+          position="0 2 0" rotation = "0 0 0"
           visible="false"></a-entity>
 	    
-	     <a-entity  id="tofuRight"  gltf-model="#tofuscene-obj" scale="-0.20 0.20 0.20"
-          position="0 1 0" rotation = "0 0 0"
+	     <a-entity  id="tofuRight"  gltf-model="#tofuscene-obj" scale="-0.50 0.50 0.50"
+          position="0 2 0" rotation = "0 0 0"
           visible="false"></a-entity>
        
       
