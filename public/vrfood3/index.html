@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>VR Food 0.00072</title>
+    <title>VR Food 0.00073</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="aframe-master.js"></script>
     <!-- script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script -->
@@ -29,7 +29,7 @@
   text-align: center;
   color: #FFF;
   border-radius: 100px;"></div -->
-     <a-scene environment   cursor="rayOrigin: mouse; fuse: false" physics="debug: true" fog="type: linear; color: #000; near: 1; far:100">
+     <a-scene environment   cursor="rayOrigin: mouse; fuse: false" physics="debug: true" fog="type: linear; color: #000; near: 0.5; far:4">
         <a-assets>
     <a-assets>
     <img id="sky" src="sky.png">
@@ -42,7 +42,8 @@
     <!-- a-asset-item id="beefscene-obj" src="blocks_8.obj"></a-asset-item>
     <a-asset-item id="beefscene-mtl" src="blocks_8.mtl"></a-asset-item -->
   </a-assets>
-       <a-sky src="#sky" material="fog: false"></a-sky>
+       <!-- a-sky src="#sky"></a-sky -->
+		 <a-sky src="" color="#666"></a-sky>
 		<a-entity light="type: directional;
                    castShadow: true;
                    intensity: 2.0;
@@ -129,8 +130,8 @@
 		
 		
 	    
-	     <a-entity  id="beefLeft"  gltf-model="#beefscene-obj"  scale="0.1 0.1 0.1"
-          position="0 0.6 0" rotation = "0 0 0"
+	     <a-entity  id="beefLeft"  gltf-model="#beefscene-obj"  scale="0.06 0.06 0.06"
+          position="-0.4 1 -0.2" rotation = "0 0 0"
           visible="false">
 		
 		 
@@ -138,12 +139,12 @@
 			 
 		</a-entity>
        
-         <a-entity  id="cheeseLeft"  gltf-model="#cheesescene-obj"  scale="0.1 0.1 0.1"
-          position="0 0.6 0" rotation = "0 0 0"
+         <a-entity  id="cheeseLeft"  gltf-model="#cheesescene-obj"  scale="0.06 0.06 0.06"
+          position="-0.4 1 -0.2" rotation = "0 0 0"
           visible="false"></a-entity>
 	    
-	     <a-entity  id="tofuLeft"  gltf-model="#tofuscene-obj"  scale="0.1 0.1 0.1"
-          position="0 0.6 0" rotation = "0 0 0"
+	     <a-entity  id="tofuLeft"  gltf-model="#tofuscene-obj"  scale="0.06 0.06 0.06"
+          position="-0.4 1 -0.2" rotation = "0 0 0"
           visible="false"></a-entity>
 	    
 	    
@@ -154,16 +155,16 @@
     
 <!-- RIGHT SIDE -->
        
-           <a-entity  id="beefRight"  gltf-model="#beefscene-obj"  scale="-0.10 0.10 0.10"
-          position="0 0.6 0" rotation = "0 0 0"
+           <a-entity  id="beefRight"  gltf-model="#beefscene-obj"  scale="-0.06 0.06 0.06"
+          position="0.4 1 -0.2" rotation = "0 0 0"
           visible="false"></a-entity>
        
-         <a-entity  id="cheeseRight"  gltf-model="#cheesescene-obj"  scale="-0.10 0.10 0.10"
-          position="0 0.6 0" rotation = "0 0 0"
+         <a-entity  id="cheeseRight"  gltf-model="#cheesescene-obj"  scale="-0.06 0.06 0.06"
+          position="0.4 1 -0.2" rotation = "0 0 0"
           visible="false"></a-entity>
 	    
-	     <a-entity  id="tofuRight"  gltf-model="#tofuscene-obj" scale="-0.10 0.10 0.10"
-          position="0 0.6 0" rotation = "0 0 0"
+	     <a-entity  id="tofuRight"  gltf-model="#tofuscene-obj" scale="-0.06 0.06 0.06"
+          position="0.4 1 -0.2" rotation = "0 0 0"
           visible="false"></a-entity>
        
       
