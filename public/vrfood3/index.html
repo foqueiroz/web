@@ -29,7 +29,7 @@
   text-align: center;
   color: #FFF;
   border-radius: 100px;"></div -->
-     <a-scene environment   cursor="rayOrigin: mouse; fuse: false" physics="debug: true" fog="type: linear; color: #000; near: 0.5; far:4">
+     <a-scene environment shadow="enabled:true"  cursor="rayOrigin: mouse; fuse: false" physics="debug: true" fog="type: linear; color: #000; near: 0.5; far:4">
         <a-assets>
     <a-assets>
     <img id="sky" src="sky.png">
@@ -46,12 +46,12 @@
 		 <a-sky src="" color="#666"></a-sky>
 		<a-entity light="type: directional;
                    castShadow: true;
-                   intensity: 2.0;
+                   intensity: 1;
                    shadowCameraVisible: false;
 						 color: #fff"
-            position="2 4 5"></a-entity>
+            position="10 10 5"></a-entity>
        <!-- a-sky color="#6EBAFF"></a-sky -->
-		 	<a-light type="ambient" color="#fff" intensity="1"></a-light>
+		 	<a-light type="ambient" color="#fff" intensity="0"></a-light>
        
  <!-- Floor >
        <a-cylinder position="0 0 0" radius="100" height=".1" color="#FFC65D"></a-cylinder -->
@@ -70,7 +70,7 @@
      
         <a-entity id="menu" menu position="0 0.9 -0.45" rotation="-90 0 0" event-manager>
 			
-			
+		
         <!-- a-entity slider position="0 0.10 0"></a-entity -->
         
         <!-- LEFT SIDE BUTTONS -->   
