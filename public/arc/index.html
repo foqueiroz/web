@@ -45,7 +45,7 @@ Source folder: <input type="text" id="foldername" > </p>
 	<p>Now enter the name of the desination folder.</p>
 	
 	<p>
-Destination folder: <input type="text" id="destination" > </p>
+Destination folder: <input type="text" id="destination" value="largefiles" > </p>
 
 	<h2>Step 3: Choose the files you'd like to upload
 	</h2>
@@ -89,7 +89,7 @@ var input = document.getElementById('myFile');
         }
     }
 
-    var children = '$ rclone copy ' +onealias + ':' + folderone + ' --include "{';
+    var children = 'rclone copy ' +onealias + ':' + folderone + ' --include "{';
     
 
     
@@ -100,7 +100,7 @@ var input = document.getElementById('myFile');
         }
     }
     output.innerHTML = ''+children+'';
-    output.innerHTML += '}" ' + destination;
+    output.innerHTML += '}" ' + destination.value;
 	output.innerHTML = output.innerHTML.replace(/\134/g,"/");
 
 }
@@ -112,7 +112,7 @@ function myFunction() {
     var onealias = document.getElementById('onedrivename').value;
 
 
-    var children = '$ rclone copy ' +onealias + ':' + folderone + ' --include "{';
+    var children = 'rclone copy ' +onealias + ':' + folderone + ' --include "{';
     
     
     for (var i = 0; i < input.files.length; ++i) {
@@ -122,7 +122,7 @@ function myFunction() {
         }
     }
     output.innerHTML = ''+children+'';
-    output.innerHTML += '}" ' + destination
+    output.innerHTML += '}" ' + destination.value;
 	output.innerHTML = output.innerHTML.replace(/\134/g,"/");
 
 }
@@ -145,7 +145,7 @@ var folderone = document.getElementById('foldername').value;
         }
     }
 
-    var children = '$ rclone copy ' +onealias + ':' + folderone + ' --include "{';
+    var children = 'rclone copy ' +onealias + ':' + folderone + ' --include "{';
     var lastfilenumber = 0;
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();
@@ -206,7 +206,7 @@ var folderone = document.getElementById('foldername').value;
     }
   }
   output.innerHTML = ''+children+'';
-    output.innerHTML += '}" ' + destination
+    output.innerHTML += '}" ' + destination.value;
 	output.innerHTML = output.innerHTML.replace(/\134/g,"/");
 }
 
