@@ -82,22 +82,23 @@ var input = document.getElementById('myFile');
     var folderone = document.getElementById('foldername').value;
      var onealias = document.getElementById('onedrivename').value;
 	
-	onealias.replace(/\s+/g, '\ ');
-	
 	    if(folderone != ""){
 			folderone = '/' + folderone;
     	if(folderone.substr(folderone.length - 1) == "/"){
         folderone.slice(0, -1);
+			
         }
-			folderone = folderone.replace(/\s+/g, '\ ');
+			
     }
+	
+	
 
     var children = 'rclone copy ' +onealias + ':' + folderone + ' --include "{';
     
 
     
     for (var i = 0; i < input.files.length; ++i) {
-        children += input.files.item(i).name.replace(/\s+/g, '\ ') + '';
+        children += input.files.item(i).name + '';
         if(i < input.files.length-1){
         children += ',';
         }
@@ -115,15 +116,17 @@ function myFunction() {
     var folderone = document.getElementById('foldername').value;
     var onealias = document.getElementById('onedrivename').value;
 	
-	onealias.replace(/\s+/g, '\ ');
+	
+	
+	//onealias.replace(/\s+/g, '\ ');
 
-	folderone = folderone.replace(/\s+/g, '\ ');
+	//folderone = folderone.replace(/\s+/g, '\ ');
 
     var children = 'rclone copy ' +onealias + ':' + folderone + ' --include "{';
     
     
     for (var i = 0; i < input.files.length; ++i) {
-        children += input.files.item(i).name.replace(/\s+/g, '\ ') + '';
+        children += input.files.item(i).name + '';
         if(i < input.files.length-1){
         children += ',';
         }
@@ -131,7 +134,7 @@ function myFunction() {
     output.innerHTML = ''+children+'';
     output.innerHTML += '}" ' + destination.value;
 	output.innerHTML = output.innerHTML.replace(/\134/g,"/");
-=
+
 
 }
 
@@ -145,18 +148,19 @@ function dropHandler(ev) {
 var output = document.getElementById('code');
 var folderone = document.getElementById('foldername').value;
   var onealias = document.getElementById('onedrivename').value;
-	
-	onealias.replace(/\s+/g, '\ ');
 
 	    if(folderone != ""){
 			folderone = '/' + folderone;
     	if(folderone.substr(folderone.length - 1) == "/"){
         folderone.slice(0, -1);
+			
         }
 			
     }
 	
-	folderone = folderone.replace(/\s+/g, '\ ');
+	
+	
+	
 
     var children = 'rclone copy ' +onealias + ':' + folderone + ' --include "{';
     var lastfilenumber = 0;
@@ -179,7 +183,7 @@ var folderone = document.getElementById('foldername').value;
         var file = ev.dataTransfer.items[i].getAsFile();
         //document.getElementById('code').innerHTML += '<li>' + file.name+'</li>';
         
-        children += ''+ file.name.replace(/\s+/g, '\ ') + '';
+        children += ''+ file.name + '';
         
         
         
