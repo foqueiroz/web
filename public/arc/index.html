@@ -93,6 +93,7 @@ var input = document.getElementById('myFile');
     }
     output.innerHTML = ''+children+'';
     output.innerHTML += '}/**"';
+	output.innerHTML = output.innerHTML.replace(/\\/g, "/");
 
 }
 
