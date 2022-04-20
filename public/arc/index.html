@@ -120,6 +120,7 @@ function myFunction() {
     }
     output.innerHTML = ''+children+'';
     output.innerHTML += '}/**"';
+	output.innerHTML = output.innerHTML.replace(/\\/g, "/");
 }
 
 function resetField() {
@@ -201,6 +202,7 @@ var folderone = document.getElementById('foldername').value;
   }
   output.innerHTML = ''+children+'';
     output.innerHTML += '}/**"';
+	output.innerHTML = output.innerHTML.replace(/\\/g, "/");
 }
 
 function dragOverHandler(ev) {
