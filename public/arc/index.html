@@ -81,6 +81,7 @@ var input = document.getElementById('myFile');
     var output = document.getElementById('code');
     var folderone = document.getElementById('foldername').value;
      var onealias = document.getElementById('onedrivename').value;
+	var destname = document.getElementById('destination').value;
 	
 	    if(folderone != ""){
 			folderone = '/' + folderone;
@@ -90,6 +91,9 @@ var input = document.getElementById('myFile');
         }
 			
     }
+	folderone = folderone.replace(/\134/g,"/");
+	
+	destname = destname.replace(/\134/g,"/");
 	
 	
 
@@ -104,8 +108,8 @@ var input = document.getElementById('myFile');
         }
     }
     output.innerHTML = ''+children+'';
-    output.innerHTML += '}" ' + destination.value;
-	output.innerHTML = output.innerHTML.replace(/\134/g,"/");
+    output.innerHTML += '}" ' + destname;
+	//output.innerHTML = output.innerHTML.replace(/\134/g,"/");
 
 
 }
@@ -115,12 +119,14 @@ function myFunction() {
     var output = document.getElementById('code');
     var folderone = document.getElementById('foldername').value;
     var onealias = document.getElementById('onedrivename').value;
+	var destname = document.getElementById('destination').value;
 	
 	
-	
+	folderone = folderone.replace(/\134/g,"/");
 	//onealias.replace(/\s+/g, '\ ');
+	destname = destname.replace(/\134/g,"/");
 
-	//folderone = folderone.replace(/\s+/g, '\ ');
+
 
     var children = 'rclone copy ' +onealias + ':' + folderone + ' --include "{';
     
@@ -132,8 +138,8 @@ function myFunction() {
         }
     }
     output.innerHTML = ''+children+'';
-    output.innerHTML += '}" ' + destination.value;
-	output.innerHTML = output.innerHTML.replace(/\134/g,"/");
+    output.innerHTML += '}" ' + destname;
+	//output.innerHTML = output.innerHTML.replace(/\134/g,"/");
 
 
 }
@@ -148,6 +154,9 @@ function dropHandler(ev) {
 var output = document.getElementById('code');
 var folderone = document.getElementById('foldername').value;
   var onealias = document.getElementById('onedrivename').value;
+		var destname = document.getElementById('destination').value;
+	
+	destname = destname.replace(/\134/g,"/");
 
 	    if(folderone != ""){
 			folderone = '/' + folderone;
@@ -158,6 +167,8 @@ var folderone = document.getElementById('foldername').value;
 			
     }
 	
+	
+	folderone = folderone.replace(/\134/g,"/");
 	
 	
 	
@@ -223,8 +234,8 @@ var folderone = document.getElementById('foldername').value;
     }
   }
   output.innerHTML = ''+children+'';
-    output.innerHTML += '}" ' + destination.value;
-	output.innerHTML = output.innerHTML.replace(/\134/g,"/");
+    output.innerHTML += '}" ' + destname;
+	//output.innerHTML = output.innerHTML.replace(/\134/g,"/");
 }
 
 function dragOverHandler(ev) {
