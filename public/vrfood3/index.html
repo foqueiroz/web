@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>VR Food 0.00079</title>
+    <title>VR Food 0.00081</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="aframe-master.js"></script>
     <!-- script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script -->
@@ -48,7 +48,7 @@
                    castShadow: true;
                    intensity: 3;
                    shadowCameraVisible: false;
-						 color: #fff; shadowMapHeight:2048; shadowMapWidth:2048;shadowRadius: 1"
+						 color: #fff; shadowMapHeight:512; shadowMapWidth:512;shadowRadius: 1"
             position="10 10 5"
 				  ></a-entity>
        <!-- a-sky color="#6EBAFF"></a-sky -->
@@ -113,7 +113,7 @@
 		 
        <!-- LADNSCAPES -->
     
-    <a-entity id="landscapes" position="0 -0.9 0" visible="true" shadow="cast:true, receive:true ">
+    <a-entity id="landscapes" position="0 -0.3 0" visible="true" shadow="cast:true, receive:true ">
 <!-- LEFT SIDE -->
        <a-entity  id="plate"  gltf-model="#plate-obj"  scale="0.1 0.1 0.1"
           position="0 0 0 " rotation = "0 0.2 0"
