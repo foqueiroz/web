@@ -52,8 +52,8 @@ Destination folder: <input type="text" id="destination" value="largefiles" > </p
 <p>You can either drag them from your OneDrive folder into the drop area below, or use the 'Choose files' button:</p>
 <img src="img/step3.PNG" width="500px" alt=""/>
 <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-  <p style="text-align: center">Drag one or more files to this Drop Zone. Alternatively, use the 'Choose Files' button below.
-<br><input type="file" name="filename" id="myFile" multiple onchange="javascript:myFunction()" label="Choose Files"> </p>
+  <p style="text-align: center" id="dragmessage">Drag one or more files to this Drop Zone. Alternatively, use the 'Choose Files' button below.</p>
+ <p style="text-align: center"><input type="file" name="filename" id="myFile" multiple onchange="javascript:myFunction()" label="Choose Files"> </p><br>
 	
 	
 
@@ -101,19 +101,31 @@ var input = document.getElementById('myFile');
 
     var children = 'rclone copy ' +onealias + ':' + folderone + ' --include "{';
     
+	
+	 
 
     
     for (var i = 0; i < input.files.length; ++i) {
 		var filename = input.files.item(i).name;
 		filename = filename.replace(/\s/g, '\\'+" ");
         children += filename + '';
+		
+		
+		
         if(i < input.files.length-1){
         children += ',';
+				
+			
         }
     }
     output.innerHTML = ''+children+'';
     output.innerHTML += '}" ' + destname;
 	//output.innerHTML = output.innerHTML.replace(/\134/g,"/");
+	
+	
+	var dragmessage = document.getElementById('dragmessage');
+	
+	dragmessage.innerHTML = "Dragged files added to command line (below).<br>To change file selection, you can either drag them again from your OneDrive folder into the drop area below, or use the 'Choose files' button:"
 
 
 }
@@ -151,6 +163,10 @@ function myFunction() {
     output.innerHTML = ''+children+'';
     output.innerHTML += '}" ' + destname;
 	//output.innerHTML = output.innerHTML.replace(/\134/g,"/");
+
+	var dragmessage = document.getElementById('dragmessage');
+	
+	dragmessage.innerHTML = "Dragged files added to command line (below).<br>To change file selection, you can either drag them again from your OneDrive folder into the drop area below, or use the 'Choose files' button:"
 
 
 }
@@ -255,6 +271,13 @@ var folderone = document.getElementById('foldername').value;
   output.innerHTML = ''+children+'';
     output.innerHTML += '}" ' + destname;
 	//output.innerHTML = output.innerHTML.replace(/\134/g,"/");
+	
+	
+	
+	var dragmessage = document.getElementById('dragmessage');
+	
+	dragmessage.innerHTML = "Dragged files added to command line (below).<br>To change file selection, you can either drag them again from your OneDrive folder into the drop area below, or use the 'Choose files' button:"
+
 }
 
 function dragOverHandler(ev) {
