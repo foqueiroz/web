@@ -93,9 +93,11 @@ var input = document.getElementById('myFile');
     }
 	folderone = folderone.replace(/\134/g,"/");
 	
+	folderone = folderone.replace(/\s/g, '\\'+" ");
+	
 	destname = destname.replace(/\134/g,"/");
 	
-	
+	destname = destname.replace(/\s/g, '\\'+" ");
 
     var children = 'rclone copy ' +onealias + ':' + folderone + ' --include "{';
     
@@ -123,8 +125,12 @@ function myFunction() {
 	
 	
 	folderone = folderone.replace(/\134/g,"/");
-	//onealias.replace(/\s+/g, '\ ');
+	
+	folderone = folderone.replace(/\s/g, '\\'+" ");
+	
 	destname = destname.replace(/\134/g,"/");
+	
+	destname = destname.replace(/\s/g, '\\'+" ");
 
 
 
@@ -156,7 +162,7 @@ var folderone = document.getElementById('foldername').value;
   var onealias = document.getElementById('onedrivename').value;
 		var destname = document.getElementById('destination').value;
 	
-	destname = destname.replace(/\134/g,"/");
+	
 
 	    if(folderone != ""){
 			folderone = '/' + folderone;
@@ -168,7 +174,13 @@ var folderone = document.getElementById('foldername').value;
     }
 	
 	
-	folderone = folderone.replace(/\134/g,"/");
+		folderone = folderone.replace(/\134/g,"/");
+	
+	folderone = folderone.replace(/\s/g, '\\'+" ");
+	
+	destname = destname.replace(/\134/g,"/");
+	
+	destname = destname.replace(/\s/g, '\\'+" ");
 	
 	
 	
