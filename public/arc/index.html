@@ -104,7 +104,9 @@ var input = document.getElementById('myFile');
 
     
     for (var i = 0; i < input.files.length; ++i) {
-        children += input.files.item(i).name + '';
+		var filename = input.files.item(i).name;
+		filename = filename.replace(/\s/g, '\\'+" ");
+        children += filename + '';
         if(i < input.files.length-1){
         children += ',';
         }
@@ -138,7 +140,10 @@ function myFunction() {
     
     
     for (var i = 0; i < input.files.length; ++i) {
-        children += input.files.item(i).name + '';
+		
+		var filename = input.files.item(i).name;
+		filename = filename.replace(/\s/g, '\\'+" ");
+        children += filename + '';
         if(i < input.files.length-1){
         children += ',';
         }
@@ -206,7 +211,9 @@ var folderone = document.getElementById('foldername').value;
         var file = ev.dataTransfer.items[i].getAsFile();
         //document.getElementById('code').innerHTML += '<li>' + file.name+'</li>';
         
-        children += ''+ file.name + '';
+		  var filename = file.name;
+		  filename = filename.replace(/\s/g, '\\'+" ");
+        children += ''+ filename + '';
         
         
         
