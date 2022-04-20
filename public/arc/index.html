@@ -76,24 +76,27 @@ var input = document.getElementById('myFile');
     var output = document.getElementById('code');
     var folderone = document.getElementById('foldername').value;
      var onealias = document.getElementById('onedrivename').value;
-
-    var children = '$ rclone copy ' +onealias + ': --include "{';
-    
-    if(folderone != ""){
-    	if(folderone.substr(folderone.length - 1) != "/"){
-        folderone += '/';
+	
+	    if(folderone != ""){
+			folderone = '/' + folderone;
+    	if(folderone.substr(folderone.length - 1) == "/"){
+        folderone.slice(0, -1);
         }
     }
+
+    var children = '$ rclone copy ' +onealias + ':' + folderone + ' --include "{';
+    
+
     
     for (var i = 0; i < input.files.length; ++i) {
-        children += ''+ folderone + input.files.item(i).name + '';
+        children += input.files.item(i).name + '';
         if(i < input.files.length-1){
-        children += ', ';
+        children += ',';
         }
     }
     output.innerHTML = ''+children+'';
-    output.innerHTML += '}/**"';
-	output.innerHTML = output.innerHTML.replace(/\\/g, "/");
+    output.innerHTML += '}"';
+	output.innerHTML = output.innerHTML.replace(/\134/g,"/");
 
 }
 
@@ -104,23 +107,19 @@ function myFunction() {
     var onealias = document.getElementById('onedrivename').value;
 
 
-    var children = '$ rclone copy ' +onealias + ': --include "{';
+    var children = '$ rclone copy ' +onealias + ':' + folderone + ' --include "{';
     
-    if(folderone != ""){
-    	if(folderone.substr(folderone.length - 1) != "/"){
-        folderone += '/';
-        }
-    }
     
     for (var i = 0; i < input.files.length; ++i) {
-        children += ''+ folderone + input.files.item(i).name + '';
+        children += input.files.item(i).name + '';
         if(i < input.files.length-1){
-        children += ', ';
+        children += ',';
         }
     }
     output.innerHTML = ''+children+'';
-    output.innerHTML += '}/**"';
-	output.innerHTML = output.innerHTML.replace(/\\/g, "/");
+    output.innerHTML += '}"';
+	output.innerHTML = output.innerHTML.replace(/\134/g,"/");
+
 }
 
 function resetField() {
@@ -134,13 +133,14 @@ var output = document.getElementById('code');
 var folderone = document.getElementById('foldername').value;
   var onealias = document.getElementById('onedrivename').value;
 
-    if(folderone != ""){
-    	if(folderone.substr(folderone.length - 1) != "/"){
-        folderone += '/';
+	    if(folderone != ""){
+			folderone = '/' + folderone;
+    	if(folderone.substr(folderone.length - 1) == "/"){
+        folderone.slice(0, -1);
         }
     }
 
-    var children = '$ rclone copy ' +onealias + ': --include "{';
+    var children = '$ rclone copy ' +onealias + ':' + folderone + ' --include "{';
     var lastfilenumber = 0;
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();
@@ -161,12 +161,12 @@ var folderone = document.getElementById('foldername').value;
         var file = ev.dataTransfer.items[i].getAsFile();
         //document.getElementById('code').innerHTML += '<li>' + file.name+'</li>';
         
-        children += ''+ folderone + file.name + '';
+        children += ''+ file.name + '';
         
         
         
         if(i < lastfilenumber){
-        children += ', ';
+        children += ',';
         }
       }
 
@@ -201,8 +201,8 @@ var folderone = document.getElementById('foldername').value;
     }
   }
   output.innerHTML = ''+children+'';
-    output.innerHTML += '}/**"';
-	output.innerHTML = output.innerHTML.replace(/\\/g, "/");
+    output.innerHTML += '}"';
+	output.innerHTML = output.innerHTML.replace(/\134/g,"/");
 }
 
 function dragOverHandler(ev) {
