@@ -1,10 +1,16 @@
 /* global AFRAME */
 
+
+
+
 AFRAME.registerComponent('log', {
   schema: {type: 'string'},
 
   init: function () {
-	   var men = document.getElementById('menu');
+	  
+	  document.querySelector('a-scene').addEventListener('enter-vr', function (event){
+		  
+		   var men = document.getElementById('menu');
 	 
 	  var cam = document.getElementById('cam');
 	  
@@ -12,13 +18,17 @@ AFRAME.registerComponent('log', {
 	  
 	  var newmenuy = cam.getAttribute('position').y - 0.9;
 	  
-	  alert(newmenuy);
+	  //alert(newmenuy);
 	  
 	 // men.setAttribute('position','0 0.7 -0.2');
 	  
 	  newmenupos = '0 ' + String(newmenuy) + " -0.2";
 	  
 	   men.setAttribute('position', newmenupos);
+		  
+	  });
+	  
+	 
 	 
    // var stringToLog = this.data;
     //alert(stringToLog);
