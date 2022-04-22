@@ -16,7 +16,7 @@ AFRAME.registerComponent('log', {
 	  
 	   //alert(cam.getAttribute('position').y);
 	  
-	  var newmenuy = cam.getAttribute('position').y - 0.9;
+	  var newmenuy = cam.getAttribute('position').y - 0.3;
 	  
 	  //alert(newmenuy);
 	  
