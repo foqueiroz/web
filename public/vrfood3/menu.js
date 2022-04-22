@@ -1,4 +1,30 @@
 /* global AFRAME */
+
+AFRAME.registerComponent('log', {
+  schema: {type: 'string'},
+
+  init: function () {
+	   var men = document.getElementById('menu');
+	 
+	  var cam = document.getElementById('cam');
+	  
+	   //alert(cam.getAttribute('position').y);
+	  
+	  var newmenuy = cam.getAttribute('position').y - 0.9;
+	  
+	  alert(newmenuy);
+	  
+	 // men.setAttribute('position','0 0.7 -0.2');
+	  
+	  newmenupos = '0 ' + String(newmenuy) + " -0.2";
+	  
+	   men.setAttribute('position', newmenupos);
+	 
+   // var stringToLog = this.data;
+    //alert(stringToLog);
+  }
+});
+
 AFRAME.registerComponent('menu', {
   init: function () {
     var el = this.el;
