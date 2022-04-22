@@ -55,6 +55,25 @@ AFRAME.registerComponent('button', {
   },
 
   onPressedStarted: function () {
+	  
+	  
+	    var men = document.getElementById('menu');
+	 
+	  var cam = document.getElementById('cam');
+	  
+	   //alert(cam.getAttribute('position').y);
+	  
+	  var newmenuy = cam.getAttribute('position').y - 0.9;
+	  
+	  //alert(newmenuy);
+	  
+	 // men.setAttribute('position','0 0.7 -0.2');
+	  
+	  newmenupos = '0 ' + String(newmenuy) + " -0.2";
+	  
+	   men.setAttribute('position', newmenupos);
+	  
+	  
     var el = this.el;
     el.setAttribute('material', {color: 'green'});
     el.emit('click');
