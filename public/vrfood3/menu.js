@@ -1,7 +1,7 @@
 /* global AFRAME */
 
 
-
+/*
 
 AFRAME.registerComponent('log', {
   schema: {type: 'string'},
@@ -34,6 +34,8 @@ AFRAME.registerComponent('log', {
     //alert(stringToLog);
   }
 });
+
+*/
 
 AFRAME.registerComponent('menu', {
   init: function () {
