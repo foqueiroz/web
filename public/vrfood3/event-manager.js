@@ -140,6 +140,8 @@ AFRAME.registerComponent('event-manager', {
     
     if (targetEl === this.darkModeButtonEl) {
 		
+		alert("clicked");
+		
 	  var men = document.getElementById('menu');
 	 
 	  var cam = document.getElementById('cam');
