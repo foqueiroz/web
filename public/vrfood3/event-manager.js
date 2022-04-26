@@ -26,6 +26,8 @@ AFRAME.registerComponent('event-manager', {
     this.rightsphereButtonEl = document.querySelector('#cheeseRightButton');
     this.righttorusButtonEl = document.querySelector('#tofuRightButton');
   
+	   
+	 this.darkModeButtonEl = document.querySelector('#darkModeButton');
     
     
     this.camEl = document.querySelector('#cam');
@@ -57,14 +59,14 @@ AFRAME.registerComponent('event-manager', {
 		'beefRightButton': this.rightboxGeometryEl,
       'cheeseRightButton': this.rightsphereGeometryEl,
 		'tofuRightButton': this.righttorusGeometryEl,
-      
+      	'darkModeButton': this.darkModeButtonEl,
     };
 
     this.boxButtonEl.addEventListener('click', this.onClick);
     this.sphereButtonEl.addEventListener('click', this.onClick);
     this.torusButtonEl.addEventListener('click', this.onClick);
     
-    //this.darkModeButtonEl.addEventListener('click', this.onClick);
+    this.darkModeButtonEl.addEventListener('click', this.onClick);
     //this.boxButtonEl.addState('pressed');
     
     this.rightboxButtonEl.addEventListener('click', this.onClick);
@@ -137,6 +139,23 @@ AFRAME.registerComponent('event-manager', {
     
     
     if (targetEl === this.darkModeButtonEl) {
+		
+	  var men = document.getElementById('menu');
+	 
+	  var cam = document.getElementById('cam');
+	  
+	   //alert(cam.getAttribute('position').y);
+	  
+	  var newmenuy = cam.getAttribute('position').y - 0.3;
+	  
+	  //alert(newmenuy);
+	  
+	 // men.setAttribute('position','0 0.7 -0.2');
+	  
+	  newmenupos = '0 ' + String(newmenuy) + " -0.2";
+	  
+	   men.setAttribute('position', newmenupos);
+		
       if (this.el.sceneEl.is('starry')) {
         targetEl.setAttribute('button', 'label', 'Dark Mode');
         this.el.sceneEl.setAttribute('environment', {preset: 'default'});

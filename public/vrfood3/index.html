@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>VR Food 0.00083</title>
+    <title>VR Food 0.00084</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="aframe-master.js"></script>
     <!-- script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script -->
@@ -29,7 +29,7 @@
   text-align: center;
   color: #FFF;
   border-radius: 100px;"></div -->
-     <a-scene environment shadow="enabled:true;"  cursor="rayOrigin: mouse; fuse: false" physics="debug: true" fog="type: linear; color: #000; near: 3; far:5" log="Hello, Scene!">
+     <a-scene environment shadow="enabled:false;"  cursor="rayOrigin: mouse; fuse: false" physics="debug: true" fog="type: linear; color: #000; near: 3; far:5" log="Hello, Scene!">
         <a-assets>
     <a-assets>
     <img id="sky" src="sky.png">
@@ -48,7 +48,7 @@
                    castShadow: false;
                    intensity: 3;
                    shadowCameraVisible: false;
-						 color: #fff; shadowMapHeight:512; shadowMapWidth:512;shadowRadius: 1"
+						 color: #fff"
             position="10 10 5"
 				  ></a-entity>
        <!-- a-sky color="#6EBAFF"></a-sky -->
@@ -88,7 +88,7 @@
      
         
            
-        <!-- a-entity id="darkModeButton" button="label: Dark Mode; width: 0.20; toggable: true" position="0 -0.10 0"></a-entity -->
+        <a-entity id="darkModeButton" button="label: Reset position; width: 0.20; toggable: true" position="0 -0.10 0"></a-entity>
       
           <a-entity id="landscapes" position="0 -0.5 -1" rotation="90 0 0"  visible="true" shadow="cast:true, receive:true ">
 <!-- LEFT SIDE -->
