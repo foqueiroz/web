@@ -142,6 +142,9 @@ AFRAME.registerComponent('event-manager', {
 		
 		alert("clicked");
 		
+		
+		
+	/*	
 	  var men = document.getElementById('menu');
 	 
 	  var cam = document.getElementById('cam');
@@ -157,6 +160,8 @@ AFRAME.registerComponent('event-manager', {
 	  newmenupos = '0 ' + String(newmenuy) + " -0.2";
 	  
 	   men.setAttribute('position', newmenupos);
+	   
+	   */
 		
       if (this.el.sceneEl.is('starry')) {
         targetEl.setAttribute('button', 'label', 'Dark Mode');
