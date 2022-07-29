@@ -30,13 +30,13 @@ func _ready() -> void:
 		# This returns immediately - our _webxr_session_supported() method 
 		# (which we connected to the "session_supported" signal above) will
 		# be called sometime later to let us know if it's supported or not.
-		webxr_interface.is_session_supported("immersive-vr")
+		webxr_interface.is_session_supported("immersive-ar")
  
 	$ARVROrigin/LeftController.connect("button_pressed", self, "_on_LeftController_button_pressed")
 	$ARVROrigin/LeftController.connect("button_release", self, "_on_LeftController_button_release")
  
 func _webxr_session_supported(session_mode: String, supported: bool) -> void:
-	if session_mode == 'immersive-vr':
+	if session_mode == 'immersive-ar':
 		vr_supported = supported
  
 func _on_Button_pressed() -> void:
@@ -46,7 +46,7 @@ func _on_Button_pressed() -> void:
  
 	# We want an immersive VR session, as opposed to AR ('immersive-ar') or a
 	# simple 3DoF viewer ('viewer').
-	webxr_interface.session_mode = 'immersive-vr'
+	webxr_interface.session_mode = 'immersive-ar'
 	# 'bounded-floor' is room scale, 'local-floor' is a standing or sitting
 	# experience (it puts you 1.6m above the ground if you have 3DoF headset),
 	# whereas as 'local' puts you down at the ARVROrigin.
